@@ -1,0 +1,27 @@
+## Ignore All
+/*
+
+# Except:
+!LICENSE
+!CNAME
+
+## Sources
+!/_includes
+!/_layouts
+!/static
+!_config.yml
+!*.html
+
+## GitHub
+!/.gitignore
+!/README.md
+
+## unwanted os-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
