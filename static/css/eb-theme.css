@@ -1,0 +1,108 @@
+/*
+Copyright 2017 ExE Boss.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+html, body {
+	overflow-x:	hidden !important;
+	position:	relative;
+	min-height:	100%;
+}
+
+.carousel {
+	background:	#777;
+}
+
+.carousel-inner {
+	height:	300px;
+}
+
+.carousel-inner > .item {
+	vertical-align:	middle;
+	height:	300px;
+}
+
+.carousel-inner > .container {
+	vertical-align:	middle;
+}
+
+.carousel-caption {
+	padding-top:	50px;
+	vertical-align:	middle;
+	height:	300px;
+}
+
+.footer {
+	position:	absolute;
+	left:	0;
+	right:	0;
+	bottom:	0;
+
+	margin-top:	50px;
+	margin-left:	0px;
+	margin-right:	0px;
+	margin-bottom:	0px;
+
+	background-image:	linear-gradient(to bottom, #d8d8d8 0%, #d0d0d0 100%);
+}
+
+.footer-top {
+	padding-top:	15px;
+	padding-bottom:	15px;
+}
+
+.footer-bottom {
+	padding-top:	15px;
+	padding-bottom:	15px;
+
+	background-image:	linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.btn.btn-social {
+	border-radius:	100%;
+
+	width:	50px;
+	height:	50px;
+	padding:	0px 3px;
+
+	font-size:	32px;
+	line-height:	48px;
+	text-align:	center;
+}
+
+.eb-list-inline {
+	max-width:	320px;
+	margin:	5px auto;
+}
+
+.eb-list-inline > li {
+	padding-bottom:	6px;
+}
+
+.eb-brand {
+	white-space:	nowrap;
+	line-height:	40px;
+	padding:	5px 15px;
+}
+
+.eb-icon-above {
+	display:	block;
+	margin:	5px auto;
+}
+
+.eb-icon {
+	vertical-align:	middle;
+	margin-right:	8px;
+	display:	inline !important;
+}
