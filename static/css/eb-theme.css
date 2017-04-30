@@ -20,6 +20,10 @@ html, body {
 	min-height:	100%;
 }
 
+body {
+	padding-bottom: 524.4px;
+}
+
 .carousel {
 	background:	#777;
 }
@@ -77,6 +81,17 @@ html, body {
 	padding:	0px 3px;
 
 	font-size:	32px;
+	line-height:	48px;
+	text-align:	center;
+}
+
+.btn.btn-social-text {
+	border-radius:	100%;
+
+	width:	50px;
+	height:	50px;
+	padding:	0px 4px;
+
 	line-height:	48px;
 	text-align:	center;
 }
