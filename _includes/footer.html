@@ -6,8 +6,8 @@
 		$(window).resize(() => {
 			document.getElementById("eb-global-footer-nickname-img").setAttribute("width",
 				$("#eb-global-footer-nickname").width());
-			$("body").css("padding-bottom", $("#eb-global-footer").outerHeight(true))
-		})
+			$("body").css("padding-bottom", $("#eb-global-footer").outerHeight(true));
+		});
 	});
 </script>
 
@@ -31,14 +31,15 @@
 						<li><a class="btn btn-default btn-social" href="https://plus.google.com/+ExEBoss"><i class="fa fa-fw fa-google-plus-official"></i></a></li>
 					</ul>
 					<div class="eb-icon-above"><a href="https://steamcommunity.com/id/ExE_Boss">
-					<img alt="Steam profile" src="http://steamsignature.com/card/1/76561198026795085.png" title=""></a></div>
+					<img	id="eb-global-footer-steam-img" alt="Steam profile" src="https://steamsignature.com/card/1/76561198026795085.png"
+						title="SteamSignature.com does not yet support HTTPS (unless it does now)" /></a></div>
 					<a href="http://steamsignature.com">Image provided by SteamSignature.com</a>
 				</div>
 				<div id="eb-global-footer-nickname" class="col-md-5">
 					<h3 class="text-center">Nickname Certificate</h3>
 					<div class="eb-icon-above"><a href="https://nick-name.ru/nickname/id1270596/">
 						<img	id="eb-global-footer-nickname-img" alt="Certificate for nickname ExE Boss, is registered to: https://ExE-Boss.GitHub.io"
-							src="https://nick-name.ru/img.php?id=1270596&sert=1" border="0"></a></div>
+							src="https://nick-name.ru/img.php?id=1270596&amp;sert=1" border="0" /></a></div>
 					<a href="https://nick-name.ru">Internet nickname registry</a>
 				</div>
 			</div>
@@ -48,7 +49,7 @@
 		<div class="containder">
 			<div class="row">
 				<div class="col-lg-12">
-					Copyright &copy; 2017 ExE Boss<br>
+					Copyright &copy; 2017 ExE Boss<br/>
 					'ExE Boss' is a proprietary trademark owned by ExE Boss
 				</div>
 			</div>

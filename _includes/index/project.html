@@ -1,15 +1,13 @@
 <div class="col-md-{{ include.col }}{% if include.offset %} col-md-offset-{{ include.offset }}{% endif %} text-center">
-	<h2 class="text-center">
-		<img	class="eb-icon-above" src="{% if include.icon_url %}{{ include.icon_url }}{% else %}/static/img/{{ include.icon }}{% endif %}"
-			width="{% if include.icon_width %}{{ include.icon_width }}{% else %}96px{% endif %}">
+	<h3 class="text-center">
+		<img	class="eb-icon-above" {% if include.icon_url %}src="{{ include.icon_url }}"{% elsif include.icon %}src="/static/img/{{ include.icon }}"{% endif %}
+			width="{% if include.icon_width %}{{ include.icon_width }}{% else %}96px{% endif %}" />
 		{{ include.name }}
-	</h2>
+	</h3>
 	<p>
 	{{ include.description }}
 	</p>
 	{% if include.url %}
-	<div>
-		<a class="btn btn-info" href="{{ include.url }}">Project Home Page &raquo;</a>
-	</div>
+	<div><a class="btn btn-info" href="{{ include.url }}">Project Home Page &raquo;</a></div>
 	{% endif %}
 </div>

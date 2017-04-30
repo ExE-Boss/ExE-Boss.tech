@@ -2,17 +2,16 @@
 layout: default
 ---
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
 <style>
 	#main-page-brand {
 		margin-top: 32px;
+		background-image: linear-gradient(to bottom, rgba(0, 127, 255, 0.5) 0%, rgba(0, 255, 255, 0.5) 100%);
 	}
 </style>
 
 <div id="main-page-brand" class="jumbotron">
 	<div class="container">
-		<h1 class="text-center"><img class="eb-logo" src="/static/img/logo.png" height="128px">ExE Boss</h1>
+		<h1 class="text-center"><img class="eb-logo" src="/static/img/logo.png" height="128px" />ExE Boss</h1>
 	</div>
 </div>
 
@@ -27,5 +26,12 @@ layout: default
 		<p>It provides an abstraction that is easy to use and maintain while giving developers confidence
 			that their work can be used across different voxel games and their versions.</p>" url="https://novaapi.net"
 		icon_url="https://novaapi.net/static/img/NOVA.svg" icon_width="195px" col="4" %}
+	</div>
+	<hr/>
+	<div class="row">
+		<h2 class="text-center">Projects that I support<p><small>Projects that I am not directly involved with, but that I think are cool</small></p></h2>
+		{% include index/project.html name="Elastic tabstops"
+		description="A better way to indent and align code"
+		url="http://nickgravgaard.com/elastic-tabstops" col="4" offset="4" %}
 	</div>
 </div>

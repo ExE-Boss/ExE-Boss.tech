@@ -5,11 +5,10 @@ title:	WebExtensions
 
 <style>
 	#carousel-1 {
-		padding-top: 50px;
-	}
-
-	.row.eb-web-extensions-row {
-		margin-top: 50px;
+		margin-top: 32px;
+		padding-top: 24px;
+		background-image: linear-gradient(to bottom, rgba(0, 127, 255, 0.35) 0%, rgba(0, 255, 255, 0.35) 100%);
+		margin-bottom: 50px;
 	}
 </style>
 
@@ -23,14 +22,14 @@ title:	WebExtensions
 		<div class="item active">
 			<div class="container">
 				<div class="carousel-caption">
-					<h1><img class="eb-icon" src="/static/img/pastel/bricks-eb-color.png" width="64px">Extension Suite</h1>
+					<h1><img class="eb-icon" src="/static/img/pastel/bricks-eb-color.png" width="64px" />Extension Suite</h1>
 					<p>
 						All my published extensions are available as an Add-on collection for quick and easy download.
 					</p>
 					<div class="eb-download-button-list">
 						<div class="btn-group">
-							<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px">Download for Firefox</a>
-							<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px">Download for Thunderbird</a>
+							<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
+							<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird</a>
 						</div>
 						<div class="btn-group"><span class="btn btn-primary disabled"><i class="fa fa-chrome"></i> Coming soon to Chrome</span></div>
 						<div class="btn-group"><span class="btn btn-info disabled"><i class="fa fa-edge"></i> Coming soon to Edge</span></div>
@@ -53,16 +52,16 @@ title:	WebExtensions
 </div>
 
 <div class="container">
-	<div class="row eb-web-extensions-row">
+	<div class="row">
 		<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-			<h2 class="text-center"><img class="eb-icon-above" src="/static/img/pastel/bricks-eb-color.png" width="96px">Extension Suite</h2>
+			<h2 class="text-center"><img class="eb-icon-above" src="/static/img/pastel/bricks-eb-color.png" width="96px" />Extension Suite</h2>
 			<p>
 				All my published extensions are available as an Add-on collection for quick and easy download.
 			</p>
 			<div class="eb-download-button-list">
 				<div class="btn-group">
-					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px">Download for Firefox</a>
-					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px">Download for Thunderbird</a>
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird</a>
 				</div>
 				<div class="btn-group"><span class="btn btn-primary disabled"><i class="fa fa-chrome"></i> Coming soon to Chrome</span></div>
 				<div class="btn-group"><span class="btn btn-info disabled"><i class="fa fa-edge"></i> Coming soon to Edge</span></div>
@@ -70,7 +69,8 @@ title:	WebExtensions
 			</div>
 		</div>
 	</div>
-	<div class="row eb-web-extensions-row">
+	<hr/>
+	<div class="row">
 		{% include web-extensions/extension.html name="Firefox about:about Button"
 		description="A Firefox exclusive WebExtension to quickly open about:* pages."
 		AMO="firefox-about-button" icon="pastel/cog.png" col="5" offset="1" %}
