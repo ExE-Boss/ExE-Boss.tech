@@ -1,47 +1,48 @@
-<div class="item{% if include.active %} active{% endif %}">
+<div class="item">
 	<div class="container">
 		<div class="carousel-caption">
 			<h1><img class="eb-icon" src="/static/img/{{ include.icon }}" width="64px">{{ include.name }}</h1>
 			<p>
 			{{ include.description }}
 			</p>
+			<div class="eb-download-button-list">
+				{% if include.AMO %}
+				<!-- Mozilla Firefox -->
+				<div class="btn-group">
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/addon/{{ include.AMO }}"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px">Download for Firefox</a>
+					{% if include.Thunderbird %}
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/addon/{{ include.AMO }}"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px">Download for Thunderbird</a>
+					{% endif %}
+				</div>
+				{% elsif include.soonAMO %}
+				<!-- Mozilla Firefox -->
+				<div class="btn-group"><span class="btn btn-success disabled"><img class="eb-logo" src="/static/img/pastel/firefox.png" height="20px">Coming soon to Firefox</span></div>
+				{% endif %}
 
-			{% if include.AMO %}
-			<!-- Mozilla Firefox -->
-			<div>
-				<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/addon/{{ include.AMO }}"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px">Download for Firefox</a>
-				{% if include.Thunderbird %}
-				<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/addon/{{ include.AMO }}"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px">Download for Thunderbird</a>
+				{% if include.Chrome %}
+				<!-- Google Chrome -->
+				<div><a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/{{ include.Chrome }}"><i class="fa fa-chrome"></i> Download for Chrome</a></div>
+				{% elsif include.soonChrome %}
+				<!-- Google Chrome -->
+				<div class="btn-group"><span class="btn btn-primary disabled"><i class="fa fa-chrome"></i> Coming soon to Chrome</span></div>
+				{% endif %}
+
+				{% if include.Edge %}
+				<!-- Microsoft Edge -->
+				<div><a class="btn btn-info" href="ms-windows-store://pdp/?ProductId={{ include.Edge }}"><i class="fa fa-edge"></i> Download for Edge</a></div>
+				{% elsif include.soonEdge %}
+				<!-- Microsoft Edge -->
+				<div class="btn-group"><span class="btn btn-info disabled"><i class="fa fa-edge"></i> Coming soon to Edge</span></div>
+				{% endif %}
+
+				{% if include.Opera %}
+				<!-- Opera -->
+				<div><a class="btn btn-danger" href="https://addons.opera.com/en/extensions/details/{{ include.Opera }}"><i class="fa fa-opera"></i> Download for Opera</a></div>
+				{% elsif include.soonOpera %}
+				<!-- Opera -->
+				<div class="btn-group"><span class="btn btn-danger disabled"><i class="fa fa-opera"></i> Coming soon to Opera</span></div>
 				{% endif %}
 			</div>
-			{% elsif include.soonAMO %}
-			<!-- Mozilla Firefox -->
-			<div class="btn btn-success disabled"><img class="eb-logo" src="/static/img/pastel/firefox.png" height="20px">Coming soon to Firefox</div>
-			{% endif %}
-
-			{% if include.Chrome %}
-			<!-- Google Chrome -->
-			<div><a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/{{ include.Chrome }}"><i class="fa fa-chrome"></i> Download for Chrome</a></div>
-			{% elsif include.soonChrome %}
-			<!-- Google Chrome -->
-			<div class="btn btn-primary disabled""><i class="fa fa-chrome"></i> Coming soon to Chrome</div>
-			{% endif %}
-
-			{% if include.Edge %}
-			<!-- Microsoft Edge -->
-			<div><a class="btn btn-info" href="ms-windows-store://pdp/?ProductId={{ include.Edge }}"><i class="fa fa-edge"></i> Download for Edge</a></div>
-			{% elsif include.soonEdge %}
-			<!-- Microsoft Edge -->
-			<div class="btn btn-info disabled""><i class="fa fa-edge"></i> Coming soon to Edge</div>
-			{% endif %}
-
-			{% if include.Opera %}
-			<!-- Opera -->
-			<div><a class="btn btn-danger" href="https://addons.opera.com/en/extensions/details/{{ include.Opera }}"><i class="fa fa-opera"></i> Download for Opera</a></div>
-			{% elsif include.soonOpera %}
-			<!-- Opera -->
-			<div class="btn btn-danger disabled""><i class="fa fa-opera"></i> Coming soon to Opera</div>
-			{% endif %}
 		</div>
 	</div>
 </div>

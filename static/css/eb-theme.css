@@ -121,3 +121,7 @@ body {
 	margin-right:	8px;
 	display:	inline !important;
 }
+
+.eb-download-button-list > div {
+	margin:	4px;
+}
