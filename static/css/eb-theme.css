@@ -24,29 +24,6 @@ body {
 	padding-bottom: 524.4px;
 }
 
-.carousel {
-	background:	#777;
-}
-
-.carousel-inner {
-	height:	300px;
-}
-
-.carousel-inner > .item {
-	vertical-align:	middle;
-	height:	300px;
-}
-
-.carousel-inner > .container {
-	vertical-align:	middle;
-}
-
-.carousel-caption {
-	padding-top:	50px;
-	vertical-align:	middle;
-	height:	300px;
-}
-
 .footer {
 	position:	absolute;
 	left:	0;
