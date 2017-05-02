@@ -1,5 +1,9 @@
-## YAML Template.
+## YEML (YAML ExE Boss Extended Markup Language) Site Configuration.
 title:	ExE Boss
 author:	ExE Boss
 baseurl:	""
 description:	The Thing with the Stuff and the Things
+wot-verification:	7007b782633555338dfc
+
+# WHO IN THE F# (the programming language) DOESN'T SUPPORT TABS IN 2017? '	' <- tab
+# P.S.: F# (the programming language) also doesn't support tabs, and that's terrible
