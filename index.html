@@ -7,12 +7,9 @@ layout: default
 		let windowResized = () => {
 			let navbarHeight	= $("#eb-global-navbar").innerHeight();
 			let windowWidth	= $("#eb-global-navbar").innerWidth();
-			$("#main-page-brand")
-				.css("height", window.innerHeight - navbarHeight)
-				.css("margin-top", navbarHeight);
 			$("#main-page-brand-logo")
 				.width(windowWidth < 400 ? Math.max((windowWidth - 300) / 100.0 * 64 + 128, 128) : 192);
-		}
+		};
 		windowResized();
 		$(window).resize(windowResized);
 	});
@@ -21,16 +18,17 @@ layout: default
 <style>
 	#main-page-brand {
 		background-image:	linear-gradient(to bottom, rgba(0, 127, 255, 0.5) 0%, rgba(0, 255, 255, 0.5) 100%);
-		margin-top: 32px;
-		padding:	0px;
+		margin-top:	50px;
+
 		display:	table;
-		height:	100%;
+		padding:	0px;
+		height:	calc(100vh - 50px);
 		width:	100%;
 	}
 
 	#main-page-brand-content {
-		display:	table-cell;
 		vertical-align:	middle;
+		display:	table-cell;
 		padding:	0px;
 	}
 
@@ -42,7 +40,7 @@ layout: default
 <div id="main-page-brand" class="jumbotron">
 	<div id="main-page-brand-content" class="container">
 		<h1	id="main-page-brand-title" class="text-center"><img id="main-page-brand-logo"
-			class="eb-logo" src="/static/img/logo.png" width="192px" />ExE Boss</h1>
+			class="eb-logo" src="/static/img/logo.png" style="width: 192px;" />ExE Boss</h1>
 	</div>
 </div>
 
