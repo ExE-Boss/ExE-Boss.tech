@@ -1,0 +1,79 @@
+---
+title:	404 Error
+include_footer:	false
+---
+
+<style type="text/css">
+	html, body {
+		overflow-y:	hidden !important;
+		padding-bottom:	0px;
+	}
+
+	#eb-404-page {
+		background-image:	linear-gradient(to bottom, rgba(0, 127, 255, 0.5) 0%, rgba(0, 255, 255, 0.5) 100%);
+		margin-top:	50px;
+		margin-bottom:	0px;
+
+		display:	table;
+		padding:	0px;
+		height:	calc(100vh - 50px);
+		width:	100%;
+	}
+
+	#eb-404-page-content {
+		vertical-align:	middle;
+		display:	table-cell;
+		padding:	0px;
+	}
+
+	#eb-404-page-title {
+		margin-top:	0px;
+	}
+
+	#eb-404-page-title > small {
+		display:	block;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			margin-top:	5px;
+		}
+
+		.jumbotron p {
+			font-size:	16px;
+			font-weight:	200;
+		}
+	}
+
+	@media (min-width: 768px) {
+		#eb-404-page-title > small {
+			font-size:	40%;
+		}
+	}
+
+</style>
+
+<div id="eb-404-page" class="jumbotron">
+	<div id="eb-404-page-content">
+		<div class="container">
+			<h1	id="eb-404-page-title" class="text-center">404 Error: Page Not Found
+				<small>Looks like the page you were trying to access is missing</small></h1>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+					<p>
+						This can happen for a variety of reasons. The page might have been moved, deleted,
+						never existed in the first place or there was a typo in the URL.
+					</p>
+				</div>
+			</div>
+			<h2 class="text-center">You can try any of the following:</h2>
+			<div class="row">
+				<div class="text-center">
+					<div class="btn-group">
+						<a class="btn btn-primary btn-lg" href="/">Go back to the front page</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
