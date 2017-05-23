@@ -6,8 +6,9 @@
 		let windowResized = () => {
 			let navbarHeight	= $("#eb-global-navbar").innerHeight();
 			let windowWidth	= $("#eb-global-navbar").innerWidth();
-			$("#main-page-brand-logo")
-				.width(windowWidth < 400 ? Math.max((windowWidth - 300) / 100.0 * 64 + 128, 128) : 192);
+			let calcSize	= windowWidth < 400 ? Math.max((windowWidth - 300) / 100.0 * 64 + 128, 128) : 192;
+			$("#main-page-brand-logo").width(calcSize);
+			$("#main-page-brand-text").css({height: `${calcSize}px`, "line-height": `${calcSize}px`});
 		};
 		windowResized();
 		$(window).resize(windowResized);
@@ -35,12 +36,23 @@
 		margin-top:	0px;
 		white-space:	nowrap;
 	}
+	
+	#main-page-brand-title img {
+		margin-top:	calc(-11px - 1px / 3);
+		margin-left:	-5px;
+	}
+	
+	#main-page-brand-title span {
+		display:	inline-block;
+		line-height:	192px;
+		height:	192px;
+	}
 </style>
 
 <div id="main-page-brand" class="jumbotron">
 	<div id="main-page-brand-content" class="container">
 		<h1	id="main-page-brand-title" class="text-center"><img id="main-page-brand-logo"
-			class="eb-logo" src="/static/img/logo.png" style="width: 192px;" />ExE Boss</h1>
+			class="eb-logo" src="/static/img/logo.png" style="width: 192px;" /><span id="main-page-brand-text" style="height: 192px; line-height: 192px;">ExE Boss</span></h1>
 	</div>
 </div>
 
