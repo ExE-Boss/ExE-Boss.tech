@@ -12,7 +12,8 @@
 !_config.yml
 !*.html
 
-## GitHub
+## Git
+!/.gitattributes
 !/.gitignore
 !/README.md
 

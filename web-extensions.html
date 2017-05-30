@@ -57,8 +57,12 @@ title:	WebExtensions
 				</div>
 			</div>
 		</div>
-		{% include web-extensions/carousel.html name="Firefox about:about Button" description="A Firefox exclusive WebExtension to quickly open about:* pages." AMO="firefox-about-button" icon="pastel/cog.png" %}
-		{% include web-extensions/carousel.html name="View Image in New Tab" description="Adds the ‘View Image in New Tab’ context menu item to the Firefox Context Menu." AMO="new-tab-image_exe-boss" icon="pastel/picture-go.png" %}
+		{% include web-extensions/carousel.html name="about:about Button"
+		description="A WebExtension to quickly open about:* pages."
+		AMO="firefox-about-button" soonChrome=true icon="pastel/cog.png" %}
+		{% include web-extensions/carousel.html name="View Image in New Tab"
+		description="Adds the ‘View Image in New Tab’ context menu item to the Firefox Context Menu."
+		AMO="new-tab-image_exe-boss" icon="pastel/picture-go.png" %}
 	</div>
 	<a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -90,9 +94,9 @@ title:	WebExtensions
 	</div>
 	<hr/>
 	<div class="row">
-		{% include web-extensions/extension.html name="Firefox about:about Button"
-		description="A Firefox exclusive WebExtension to quickly open about:* pages."
-		AMO="firefox-about-button" icon="pastel/cog.png" col="5" offset="1" %}
+		{% include web-extensions/extension.html name="about:about Button"
+		description="A WebExtension to quickly open about:* pages."
+		AMO="firefox-about-button" soonChrome=true icon="pastel/cog.png" col="5" offset="1" %}
 
 		{% include web-extensions/extension.html name="View Image in New Tab"
 		description="Adds the ‘View Image in New Tab’ context menu item to the Firefox Context Menu."
