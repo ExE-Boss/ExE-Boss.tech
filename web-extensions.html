@@ -39,24 +39,39 @@ title:	WebExtensions
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1><img class="eb-icon" src="/static/img/pastel/bricks-eb-color.png" width="64px" />Extension Suite</h1>
-					<p>
-						All my published extensions are available as an Add-on collection for a quick and easy download.
-					</p>
-					<div class="eb-download-button-list">
-						<div class="btn-group">
-							<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
-							<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird</a>
-						</div>
-						<div class="btn-group"><span class="btn btn-primary disabled"><i class="fa fa-chrome"></i> Coming soon to Chrome</span></div>
-						<div class="btn-group"><span class="btn btn-info disabled"><i class="fa fa-edge"></i> Coming soon to Edge</span></div>
-						<div class="btn-group"><span class="btn btn-danger disabled"><i class="fa fa-opera"></i> Coming soon to Opera</span></div>
-					</div>
+	<div class="container">
+		<div class="carousel-caption">
+			<h1><img class="eb-icon" src="/static/img/pastel/bricks-eb-color.png" width="64px" />Extension Suite</h1>
+			<p>
+				All my published extensions are available as an Add-on collection for a quick and easy download.
+			</p>
+			<div class="eb-download-button-list">
+				<!-- Mozilla Firefox -->
+				<div class="btn-group">
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird</a>
 				</div>
+
+				<!-- Google Chrome -->
+				<div class="btn-group"><span class="btn btn-primary disabled" data-toggle="tooltip" data-placement="top"
+					title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-chrome"></i> Coming soon to Chrome</span></div>
+
+				<!-- Microsoft Edge -->
+				<div class="btn-group"><span class="btn btn-info disabled" data-toggle="tooltip" data-placement="top"
+					title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-edge"></i> Coming soon to Edge</span></div>
+
+				<!-- Opera -->
+				<div class="btn-group"><span class="btn btn-danger disabled" data-toggle="tooltip" data-placement="top"
+					title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-opera"></i> Coming soon to Opera</span></div>
 			</div>
 		</div>
+	</div>
+</div>
 		{% include web-extensions/carousel.html name="about:about Button"
 		description="A WebExtension to quickly open about:* pages."
 		AMO="firefox-about-button" soonChrome=true icon="pastel/cog.png" %}
@@ -82,13 +97,28 @@ title:	WebExtensions
 				All my published extensions are available as an Add-on collection for a quick and easy download.
 			</p>
 			<div class="eb-download-button-list">
+				<!-- Mozilla Firefox -->
 				<div class="btn-group">
-					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
-					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite"><img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird</a>
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/firefox/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
+					<a class="btn btn-success" href="https://addons.mozilla.org/en-US/thunderbird/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird</a>
 				</div>
-				<div class="btn-group"><span class="btn btn-primary disabled"><i class="fa fa-chrome"></i> Coming soon to Chrome</span></div>
-				<div class="btn-group"><span class="btn btn-info disabled"><i class="fa fa-edge"></i> Coming soon to Edge</span></div>
-				<div class="btn-group"><span class="btn btn-danger disabled"><i class="fa fa-opera"></i> Coming soon to Opera</span></div>
+
+				<!-- Google Chrome -->
+				<div class="btn-group"><span class="btn btn-primary disabled" data-toggle="tooltip" data-placement="top"
+					title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-chrome"></i> Coming soon to Chrome</span></div>
+
+				<!-- Microsoft Edge -->
+				<div class="btn-group"><span class="btn btn-info disabled" data-toggle="tooltip" data-placement="top"
+					title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-edge"></i> Coming soon to Edge</span></div>
+
+				<!-- Opera -->
+				<div class="btn-group"><span class="btn btn-danger disabled" data-toggle="tooltip" data-placement="top"
+					title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-opera"></i> Coming soon to Opera</span></div>
 			</div>
 		</div>
 	</div>
