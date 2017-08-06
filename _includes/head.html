@@ -9,7 +9,7 @@
 
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
-<link rel="icon" href="/static/img/favicon.ico" />
+<link rel="icon" href="/static/img/favicon/desktop.ico" />
 <link id="global-head-link-icons-end" rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />
@@ -24,7 +24,7 @@
 		if (iOSuserAgent.test(window.navigator.userAgent)) {
 			let link = document.createElement("link");
 			link.setAttribute("rel",	"apple-touch-icon-precomposed");
-			link.setAttribute("href",	"/static/img/apple-icon.png");
+			link.setAttribute("href",	"/static/img/favicon/apple.png");
 			document.head.insertBefore(link, document.getElementById("global-head-link-icons-end"));
 		}
 		document.getElementById("global-head-link-icons-end").removeAttribute("id");

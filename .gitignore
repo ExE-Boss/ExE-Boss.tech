@@ -6,8 +6,8 @@
 !CNAME
 
 ## Sources
-!/_includes
-!/_layouts
+!/_*
+/_site
 !/static
 !_config.yml
 !*.html
