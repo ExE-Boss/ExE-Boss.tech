@@ -4,9 +4,10 @@
 <meta name="description" content="{{ site.description }}" />
 <meta name="author" content="{{ site.author }}" />
 
-<meta name="google-site-verification" content="{{ site.google-verification }}" />
-<meta name="wot-verification" content="{{ site.wot-verification }}" />
-
+{% for google-verification in site.google-verification %}<meta name="google-site-verification" content="{{ google-verification }}" />
+{% endfor %}
+{% for wot-verification in site.wot-verification %}<meta name="wot-verification" content="{{ wot-verification }}" />
+{% endfor %}
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
 <link rel="icon" href="/static/img/favicon/desktop.ico" />
