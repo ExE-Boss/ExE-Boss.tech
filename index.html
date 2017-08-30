@@ -1,11 +1,10 @@
 ---
 ---
 
-<script type="text/javascript">
+<script type="text/javascript" async="true">
 	$(() => {
 		let windowResized = () => {
-			let navbarHeight	= $("#eb-global-navbar").innerHeight();
-			let windowWidth	= $("#eb-global-navbar").innerWidth();
+			let windowWidth	= $(window).innerWidth();
 			let calcSize	= windowWidth < 400 ? Math.max((windowWidth - 300) / 100.0 * 64 + 128, 128) : 192;
 			$("#main-page-brand-logo").width(calcSize);
 			$("#main-page-brand-text").css({height: `${calcSize}px`, "line-height": `${calcSize}px`});

@@ -101,9 +101,7 @@ var EBUtil = (function() {
 		 * @return {UserAgentInfo}
 		 */
 		getUAInfo() {
-			let result = parseUserAgent();
-			console.log(result);
-			return result;
+			return parseUserAgent();
 		}
 	}
 })();
