@@ -10,7 +10,9 @@ defaults:
             path:	""
         values:
             layout:	"default"
-            include_footer:	true
+            include-footer:	true
+            include-css:
+            include-js:
 
 # WHO IN THE F# (the programming language) DOESN'T SUPPORT TABS IN 2017? '	' <- tab
 # P.S.: F# (the programming language) also doesn't support tabs, and that's terrible

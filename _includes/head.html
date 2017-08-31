@@ -17,4 +17,11 @@
 <script type="text/javascript" src="/static/js/eb-util.js"></script>
 <script type="text/javascript" async="true">$(() => $('[data-toggle="tooltip"]').tooltip());</script>
 <script type="text/javascript" async="true" src="/static/js/favicon.js"></script>
-<noscript id="global-head-link-icons-end"><link rel="apple-touch-icon-precomposed" href="/static/img/favicon/apple.png"></noscript>
+<noscript id="global-head-link-icons-end"><link rel="apple-touch-icon-precomposed" href="/static/img/favicon/apple.png"/></noscript>
+{% if page.include-css %}
+{% for page-css in page.include-css %}<link rel="stylesheet" type="text/css" href="/static/css/includes/{{ page-css }}.css" />
+{% endfor %}{% endif %}{% if page.include-js %}
+{% for page-js in page.include-js %}<script type="text/javascript" async="true" src="/static/js/includes/{{ page-js }}.js"></script>
+{% endfor %}{% endif %}{% if page.include-footer and page.include-footer != "false" %}
+<link rel="stylesheet" type="text/css" href="/static/css/includes/footer.css" />
+<script type="text/javascript" async="true" src="/static/js/includes/footer.js"></script>{% endif %}

@@ -1,44 +1,8 @@
 ---
 title:	WebExtensions
+include-css:
+    - "web-extensions"
 ---
-
-<style type="text/css">
-	.carousel {
-		--eb-carousel-height:	400px;
-	}
-
-	#carousel-1 {
-		margin-top: 50px;
-		background:	#777;
-		background-image: linear-gradient(to bottom, rgba(0, 127, 255, 0.35) 0%, rgba(0, 255, 255, 0.35) 100%);
-		margin-bottom: 50px;
-	}
-
-	.carousel-inner {
-		height:	var(--eb-carousel-height);
-	}
-
-	.carousel-inner > .item {
-		vertical-align:	middle;
-		height:	var(--eb-carousel-height);
-	}
-
-	.carousel-inner > .container {
-		vertical-align:	middle;
-	}
-
-	.carousel-caption {
-		padding-top:	80px;
-		vertical-align:	middle;
-		height:	var(--eb-carousel-height);
-	}
-
-	@media (max-width: 767px) and (max-height: 767px) {
-		#carousel-1 {
-			--eb-carousel-height:	calc(100vh - 50px);
-		}
-	}
-</style>
 
 <div class="carousel slide" id="carousel-1" data-ride="carousel">
 	<ol class="carousel-indicators">
@@ -81,9 +45,11 @@ title:	WebExtensions
 		</div>
 	</div>
 </div>
+
 		{% include web-extensions/carousel.html name="about:about Button"
 		description="A WebExtension to quickly open about:* pages."
 		AMO="firefox-about-button" soonChrome=true icon="pastel/cog.png" %}
+
 		{% include web-extensions/carousel.html name="View Image in New Tab"
 		description="Adds the ‘View Image in New Tab’ context menu item to the Firefox Context Menu."
 		AMO="new-tab-image_exe-boss" soonEdge=true icon="pastel/picture-go.png" %}
