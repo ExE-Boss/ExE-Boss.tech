@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+"use strict";
 /* global EBUtil */
 
 $(() => {
@@ -28,26 +29,28 @@ $(() => {
 			} case "Firefox": {
 				let majorVersion = Number(uaInfo.browser.version.split(".")[0]);
 				if (majorVersion >= 8) {
-//					let size;
-//					let link2;
-//
-//					size = 18 * window.devicePixelRatio;
-//					link2 = document.createElement("link");
-//					link2.setAttribute("rel",	"apple-touch-icon-precomposed");
-//					link2.setAttribute("sizes", `${size}x${size}`);
-//					link2.setAttribute("href",	"/static/img/favicon/fxios-8.0-titlebar.png");
-//					document.head.insertBefore(link2, document.getElementById("global-head-link-icons-end"));
-//
-//					size = 29 * window.devicePixelRatio;
-//					link2 = document.createElement("link");
-//					link2.setAttribute("rel",	"apple-touch-icon-precomposed");
-//					link2.setAttribute("sizes",	`${size}x${size}`);
-//					link2.setAttribute("href",	"/static/img/favicon/fxios-8.0-small.png");
-//					document.head.insertBefore(link2, document.getElementById("global-head-link-icons-end"));
-//
-//					size = 76 * window.devicePixelRatio;
-//					link.setAttribute("sizes",	`${size}x${size}`);
-//					link.setAttribute("href",	"/static/img/favicon/fxios-8.0.png");
+					/*
+					let size;
+					let link2;
+
+					size = 18 * window.devicePixelRatio;
+					link2 = document.createElement("link");
+					link2.setAttribute("rel",	"apple-touch-icon-precomposed");
+					link2.setAttribute("sizes", `${size}x${size}`);
+					link2.setAttribute("href",	"/static/img/favicon/fxios-8.0-titlebar.png");
+					document.head.insertBefore(link2, document.getElementById("global-head-link-icons-end"));
+
+					size = 29 * window.devicePixelRatio;
+					link2 = document.createElement("link");
+					link2.setAttribute("rel",	"apple-touch-icon-precomposed");
+					link2.setAttribute("sizes",	`${size}x${size}`);
+					link2.setAttribute("href",	"/static/img/favicon/fxios-8.0-small.png");
+					document.head.insertBefore(link2, document.getElementById("global-head-link-icons-end"));
+
+					size = 76 * window.devicePixelRatio;
+					link.setAttribute("sizes",	`${size}x${size}`);
+					link.setAttribute("href",	"/static/img/favicon/fxios-8.0.png");
+					*/
 				}
 				break;
 			}
