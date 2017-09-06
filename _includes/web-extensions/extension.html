@@ -6,7 +6,7 @@
 	<div class="eb-download-button-list">
 		{% if include.AMO %}
 		<!-- Mozilla Firefox -->
-		<div class="btn-group">
+		<div class="btn-group" {% if include.Thunderbird or include.soonThunderbird %} data-vertical="<xs" {% endif %}>
 			<a class="btn btn-success" href="https://addons.mozilla.org/firefox/addon/{{ include.AMO }}/">
 				<img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
 			{% if include.Thunderbird %}
@@ -20,7 +20,7 @@
 		</div>
 		{% elsif include.soonAMO %}
 		<!-- Mozilla Firefox -->
-		<div class="btn-group">
+		<div class="btn-group" {% if include.Thunderbird or include.soonThunderbird %} data-vertical="<xs" {% endif %}>
 			<span class="btn btn-success disabled" data-toggle="tooltip" data-placement="top"
 				title="No guarantees are made about this releasing before Half-Life 3">
 					<img class="eb-logo" src="/static/img/pastel/firefox.png" height="20px" />Coming soon to Firefox</span>
