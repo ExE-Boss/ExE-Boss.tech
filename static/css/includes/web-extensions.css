@@ -20,10 +20,9 @@
 }
 
 #carousel-1 {
-	margin-top: 50px;
 	background:	#777;
-	background-image: linear-gradient(to bottom, rgba(0, 127, 255, 0.35) 0%, rgba(0, 255, 255, 0.35) 100%);
-	margin-bottom: 50px;
+	background-image:	linear-gradient(to bottom, rgba(0, 127, 255, 0.35) 0%, rgba(0, 255, 255, 0.35) 100%);
+	margin-bottom:	50px;
 }
 
 .carousel-inner {

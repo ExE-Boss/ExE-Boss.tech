@@ -15,8 +15,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#main-page-brand {
+html, body {
+	overflow-y:	hidden !important;
+	padding-bottom:	0px;
+}
+
+#eb-http-status-page {
 	background-image:	linear-gradient(to bottom, rgba(0, 127, 255, 0.5) 0%, rgba(0, 255, 255, 0.5) 100%);
+	margin-bottom:	0px;
 
 	display:	table;
 	padding:	0px;
@@ -24,24 +30,33 @@
 	width:	100%;
 }
 
-#main-page-brand-content {
+#eb-http-status-page-content {
 	vertical-align:	middle;
 	display:	table-cell;
 	padding:	0px;
 }
 
-#main-page-brand-title {
+#eb-http-status-page-title {
 	margin-top:	0px;
-	white-space:	nowrap;
 }
 
-#main-page-brand-title img {
-	margin-top:	calc(-11px - 1px / 3);
-	margin-left:	-5px;
+#eb-http-status-page-title > small {
+	display:	block;
 }
 
-#main-page-brand-title span {
-	display:	inline-block;
-	line-height:	192px;
-	height:	192px;
+@media (max-width: 767px) {
+	h2 {
+		margin-top:	5px;
+	}
+
+	.jumbotron p {
+		font-size:	16px;
+		font-weight:	200;
+	}
+}
+
+@media (min-width: 768px) {
+	#eb-404-page-title > small {
+		font-size:	40%;
+	}
 }
