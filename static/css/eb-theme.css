@@ -75,6 +75,12 @@ body {
 	text-align:	center;
 }
 
+.btn.btn-social-text[data-linecount="2"] {
+	line-height:	16px;
+	padding-top:	8px;
+	padding-bottom:	8px;
+}
+
 .eb-list-inline {
 	max-width:	320px;
 	margin:	5px auto;
