@@ -12,16 +12,16 @@
 <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/eb-theme.css" />
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script type="text/javascript" async="true" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" async="true" src="/static/js/eb-util.js"></script>
-<script type="text/javascript">$(() => $('[data-toggle="tooltip"]').tooltip());</script>
-<script type="text/javascript" defer="true" src="/static/js/favicon.js"></script>
+<script type="application/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="application/javascript" async="true" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="application/javascript" async="true" src="/static/js/eb-util.js"></script>
+<script type="application/javascript">$(() => $('[data-toggle="tooltip"]').tooltip());</script>
+<script type="application/javascript" defer="true" src="/static/js/favicon.js"></script>
 <noscript id="global-head-link-icons-end"><link rel="apple-touch-icon-precomposed" href="/static/img/favicon/apple.png"/></noscript>
 {% if page.include-css %}
 {% for page-css in page.include-css %}<link rel="stylesheet" type="text/css" href="/static/css/includes/{{ page-css }}.css" />
 {% endfor %}{% endif %}{% if page.include-js %}
-{% for page-js in page.include-js %}<script type="text/javascript" defer="true" src="/static/js/includes/{{ page-js }}.js"></script>
+{% for page-js in page.include-js %}<script type="application/javascript" defer="true" src="/static/js/includes/{{ page-js }}.js"></script>
 {% endfor %}{% endif %}{% if page.include-footer and page.include-footer != "false" %}
 <link rel="stylesheet" type="text/css" href="/static/css/includes/footer.css" />
-<script type="text/javascript" async="true" src="/static/js/includes/footer.js"></script>{% endif %}
+<script type="application/javascript" async="true" src="/static/js/includes/footer.js"></script>{% endif %}
