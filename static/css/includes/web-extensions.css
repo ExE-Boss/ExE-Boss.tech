@@ -34,7 +34,7 @@
 	height:	var(--eb-carousel-height);
 }
 
-.carousel-inner > .container {
+.carousel-inner > .item > .container {
 	vertical-align:	middle;
 }
 
@@ -44,7 +44,7 @@
 	height:	var(--eb-carousel-height);
 }
 
-@media (max-width: 767px) and (max-height: 767px) {
+@media (max-width: 767px) and (max-height: 767px), (max-height: 575px) {
 	#carousel-1 {
 		--eb-carousel-height:	calc(100vh - 50px);
 	}
