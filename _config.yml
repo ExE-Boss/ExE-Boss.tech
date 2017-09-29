@@ -1,8 +1,10 @@
 ## YEML (YAML ExE Boss Extended Markup Language) Site Configuration.
 title:	ExE Boss
 author:	ExE Boss
-baseurl:	""
 description:	The Thing with the Stuff and the Things
+
+url:	https://exe-boss.tech
+baseurl:	""
 
 defaults:
     -
