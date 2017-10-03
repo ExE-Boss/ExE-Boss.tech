@@ -4,10 +4,10 @@
 			width="{% if include.icon_width %}{{ include.icon_width }}{% else %}96px{% endif %}" />
 		{{ include.name }}
 	</h3>
-	<p>
-	{{ include.description }}
-	</p>
-	{% if include.url %}
-	<div><a class="btn btn-info" href="{{ include.url }}">Project Home Page »</a></div>
-	{% endif %}
+	{% unless include.description contains "<p>" %}<p>{% endunless
+		%}{{ include.description }}{% unless include.description contains "</p>"
+	%}</p>{% endunless %}
+	{% if include.url
+		%}<div><a class="btn btn-info" href="{{ include.url }}">Project Home Page »</a></div>{%
+	endif %}
 </div>

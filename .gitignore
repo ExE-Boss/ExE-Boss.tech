@@ -1,4 +1,4 @@
-## Ignore All
+# Ignore All
 /*
 
 # Except:
@@ -11,6 +11,7 @@
 !/static
 !_config.yml
 !*.html
+!*.xhtml
 !robots.txt
 
 ## Git
@@ -18,7 +19,7 @@
 !/.gitignore
 !/README.md
 
-## unwanted os-generated files
+# Unwanted crap
 .DS_Store
 .DS_Store?
 ._*

@@ -1,12 +1,12 @@
 <div class="col-md-{{ include.col }}{% if include.offset %} col-md-offset-{{ include.offset }}{% endif %} text-center">
 	<h2 class="text-center"><img class="eb-icon-above" src="/static/img/{{ include.icon }}" width="96px" />{{ include.name }}</h2>
-	<p>
-	{{ include.description }}
-	</p>
+	{% unless include.description contains "<p>" %}<p>{% endunless
+		%}{{ include.description }}{% unless include.description contains "</p>"
+	%}</p>{% endunless %}
 	<div class="eb-download-button-list">
 		{% if include.AMO %}
 		<!-- Mozilla Firefox -->
-		<div class="btn-group" {% if include.Thunderbird or include.soonThunderbird %} data-vertical="<xs" {% endif %}>
+		<div class="btn-group" {% if include.Thunderbird or include.soonThunderbird %} data-vertical="&lt;xs" {% endif %}>
 			<a class="btn btn-success" href="https://addons.mozilla.org/firefox/addon/{{ include.AMO }}/">
 				<img class="eb-icon" src="/static/img/pastel/firefox.png" height="20px" />Download for Firefox</a>
 			{% if include.Thunderbird %}
@@ -20,7 +20,7 @@
 		</div>
 		{% elsif include.soonAMO %}
 		<!-- Mozilla Firefox -->
-		<div class="btn-group" {% if include.Thunderbird or include.soonThunderbird %} data-vertical="<xs" {% endif %}>
+		<div class="btn-group" {% if include.Thunderbird or include.soonThunderbird %} data-vertical="&lt;xs" {% endif %}>
 			<span class="btn btn-success disabled" data-toggle="tooltip" data-placement="top"
 				title="No guarantees are made about this releasing before Half-Life 3">
 					<img class="eb-logo" src="/static/img/pastel/firefox.png" height="20px" />Coming soon to Firefox</span>
