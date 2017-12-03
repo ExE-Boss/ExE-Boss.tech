@@ -5,7 +5,7 @@
 <meta name="author" content="{{ site.author }}" />
 
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{% if page.url != '/' %}{{ page.url | remove: '.html' }}{% endif%}" />
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{% unless page.url == '/' %}{{ page.url | remove: '.html' }}{% endunless %}" />
 
 <link rel="icon" href="/static/img/favicon/desktop.ico" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -25,4 +25,5 @@
 {% for page-js in page.include-js %}<script type="application/javascript" defer="true" src="/static/js/includes/{{ page-js }}.js"></script>
 {% endfor %}{% endif %}{% if page.include-footer and page.include-footer != "false" %}
 <link rel="stylesheet" type="text/css" href="/static/css/includes/footer.css" />
-<script type="application/javascript" async="true" src="/static/js/includes/footer.js"></script>{% endif %}
+<script type="application/javascript" async="true" src="/static/js/includes/footer.js"></script>
+{% endif %}

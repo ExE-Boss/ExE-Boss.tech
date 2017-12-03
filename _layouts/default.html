@@ -21,9 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	</head>
 	<body id = "body">
 		{% include nav.html %}
-		{{ content }}
-		{% if page.include-footer and page.include-footer != "false" %}
-		{% include footer.html %}
-		{% endif %}
+		{{ content }}{% if page.include-footer and page.include-footer != "false" %}
+		{% include footer.html %}{% endif %}
 	</body>
 </html>
