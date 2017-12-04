@@ -1,0 +1,8 @@
+{% if page.content-security-policy %}
+{% for csp in page.content-security-policy %}{% unless csp.name == 'frame-ancestors' %}<meta http-equiv="Content-Security-Policy" content="{{ csp.name | replace: '"', '%22' | replace: ';', '%3B' }}{% for value in csp.value %} {{ value | replace: '"', '%22' | replace: ';', '%3B' }}{% endfor %}" />
+{% endunless %}{% endfor %}{% for csp in page.content-security-policy %}{% if csp.name == "frame-ancestors" %}{% if csp.value[0] == "'none'" %}<meta http-equiv="X-Frame-Options" content="DENY" />
+{% elsif csp.value[0] == "'self'" %}<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+{% else %}<meta http-equiv="X-Frame-Options" content="ALLOW-FROM {{ csp.value[0] }}" />
+{% endif %}{% elsif csp.name == "script-src" %}{% if csp.value contains "'unsafe-inline'" %}<meta http-equiv="X-XSS-Protection" content="0" />
+{% else %}<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+{% endif %}{% endif %}{% endfor %}{% endif %}
