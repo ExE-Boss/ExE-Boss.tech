@@ -29,12 +29,12 @@
 	height:	var(--eb-carousel-height);
 }
 
-.carousel-inner > .item {
+.carousel-inner > .carousel-item {
 	vertical-align:	middle;
 	height:	var(--eb-carousel-height);
 }
 
-.carousel-inner > .item > .container {
+.carousel-inner > .carousel-item > .container {
 	vertical-align:	middle;
 }
 

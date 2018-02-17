@@ -1,4 +1,4 @@
-<div class="col-md-{{ include.col }}{% if include.offset %} col-md-offset-{{ include.offset }}{% endif %} text-center">
+<div class="col-md-{{ include.col }} text-center">
 	<h2 class="text-center"><img class="eb-icon-above" src="/static/img/{{ include.icon }}" width="96px" />{{ include.name }}</h2>
 	{% unless include.description contains "<p>" %}<p>{% endunless
 		%}{{ include.description }}{% unless include.description contains "</p>"

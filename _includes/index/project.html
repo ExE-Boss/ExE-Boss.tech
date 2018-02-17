@@ -1,4 +1,4 @@
-<div class="col-md-{{ include.col }}{% if include.offset %} col-md-offset-{{ include.offset }}{% endif %} text-center">
+<div class="col-md-{{ include.col }} text-center">
 	<h3 class="text-center">
 		<img	class="eb-icon-above" {% if include.icon_url %}src="{{ include.icon_url }}"{% elsif include.icon %}src="/static/img/{{ include.icon }}"{% endif %}
 			width="{% if include.icon_width %}{{ include.icon_width }}{% else %}96px{% endif %}" />

@@ -13,7 +13,7 @@ include-js:
 		<li data-target="#carousel-1" data-slide-to="2"></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
-		<div class="item active">
+		<div class="carousel-item active">
 	<div class="container">
 		<div class="carousel-caption">
 			<h1><img class="eb-icon" src="/static/img/pastel/bricks-eb-color.png" width="64px" />Extension Suite</h1>
@@ -56,19 +56,19 @@ include-js:
 		description="Adds the ‘View Image in New Tab’ context menu item to the Firefox Context Menu."
 		AMO="new-tab-image_exe-boss" soonEdge=true icon="pastel/picture-go.png" %}
 	</div>
-	<a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	<a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		<span class="sr-only">Previous</span>
 	</a>
-	<a class="right carousel-control" href="#carousel-1" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	<a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	</a>
 </div>
 
 <div class="container">
-	<div class="row">
-		<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+	<div class="row justify-content-center">
+		<div class="col col-md-8 text-center">
 			<h2 class="text-center"><img class="eb-icon-above" src="/static/img/pastel/bricks-eb-color.png" width="96px" />Extension Suite</h2>
 			<p>
 				All my published extensions are available as an Add-on collection for a quick and easy download.
@@ -100,10 +100,10 @@ include-js:
 		</div>
 	</div>
 	<hr/>
-	<div class="row">
+	<div class="row justify-content-center">
 		{% include web-extensions/extension.html name="about:about Button"
 		description="A WebExtension to quickly open about:* pages."
-		AMO="firefox-about-button" soonChrome=true icon="pastel/cog.png" col="5" offset="1" %}
+		AMO="firefox-about-button" soonChrome=true icon="pastel/cog.png" col="5" %}
 
 		{% include web-extensions/extension.html name="View Image in New Tab"
 		description="Adds the ‘View Image in New Tab’ context menu item to the browser’s Context Menu."
@@ -111,7 +111,7 @@ include-js:
 
 		{% include web-extensions/extension.html name="Application Menu"
 		description="A WebExtension which adds the Application menu to the Firefox titlebar."
-		AMO="application-menu" icon="pastel/firefox.png" col="5" offset="1" %}
+		AMO="application-menu" icon="pastel/firefox.png" col="5" %}
 
 		{% include web-extensions/extension.html name="Reload button in Location bar"
 		description="A WebExtension which adds the reload button to the Firefox Location bar."

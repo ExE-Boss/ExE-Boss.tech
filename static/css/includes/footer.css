@@ -31,3 +31,7 @@
 	border-radius:	8px;
 	box-shadow:	0 11px 27px #afb2b2;
 }
+
+#eb-global-footer-social .eb-list-inline > li {
+	display: inline-block;
+}
