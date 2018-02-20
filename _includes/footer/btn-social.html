@@ -1,0 +1,12 @@
+<li><a class="btn btn-secondary rounded-circle" rel="nofollow noopener noreferrer" href="{{ include.href }}"{%
+if include.display
+	%} data-display="{{ include.display }}"{%
+endif %}{%
+if include.display == "text" and include.linecount
+	%} data-linecount="{{ include.linecount }}"{%
+endif %}>{%
+if include.display == "text"
+	%}{{ include.text }}{%
+elsif include.icon
+	%}<i class="fa fa-fw fa-{{ include.icon }}"></i>{%
+endif %}</a></li>

@@ -35,3 +35,63 @@
 #eb-global-footer-social .eb-list-inline > li {
 	display: inline-block;
 }
+
+#eb-global-footer-social .btn.rounded-circle {
+	width:	50px;
+	height:	50px;
+	padding:	0px 3px 1px;
+
+	line-height:	47px;
+	text-align:	center;
+}
+
+#eb-global-footer-social .btn.rounded-circle:not([data-display="text"]) {
+	font-size:	32px;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"] {
+	padding-left:	0px;
+	padding-right:	0px;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"][data-linecount="2"] {
+	line-height:	16px;
+	padding-top:	8px;
+	padding-bottom:	8px;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] {
+	padding-top:	9px;
+	padding-bottom:	9px;
+	text-shadow:	#000 0 0 2px;
+	font-weight:	bold;
+
+	-webkit-text-stroke:	.8px #101018;
+	text-stroke:	.8px #101018;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] small {
+	font-size:	10px;
+	margin:	1px -3px 0;
+	line-height:	13px;
+	display:	block;
+	font-weight:	bold;
+
+	-webkit-text-stroke:	.4px #101018;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-red {
+	color:	#FF3939;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-green {
+	color:	#00CE00;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-blue {
+	color:	#00DEFF;
+}
+
+#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-yellow {
+	color:	#FFCE29;
+}

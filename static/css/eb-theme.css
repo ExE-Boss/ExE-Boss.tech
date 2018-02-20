@@ -54,35 +54,6 @@ body {
 	background:	linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
-.btn.btn-social {
-	border-radius:	100%;
-
-	width:	50px;
-	height:	50px;
-	padding:	0px 3px;
-
-	font-size:	32px;
-	line-height:	48px;
-	text-align:	center;
-}
-
-.btn.btn-social-text {
-	border-radius:	100%;
-
-	width:	50px;
-	height:	50px;
-	padding:	0px 4px;
-
-	line-height:	48px;
-	text-align:	center;
-}
-
-.btn.btn-social-text[data-linecount="2"] {
-	line-height:	16px;
-	padding-top:	8px;
-	padding-bottom:	8px;
-}
-
 .eb-list-inline {
 	max-width:	320px;
 	margin:	5px auto;
