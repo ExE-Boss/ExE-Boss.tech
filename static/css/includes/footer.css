@@ -16,20 +16,24 @@
  */
 
 #eb-global-footer-steam-img {
-	min-width:	0px;
 	max-width:	100%;
-	width:	100%;
+	width:	400px;
 
 	border-radius:	1.5px;
 }
 
 #eb-global-footer-nickname-img {
-	min-width:	0px;
 	max-width:	100%;
 	width:	100%;
 
 	border-radius:	8px;
 	box-shadow:	0 11px 27px #afb2b2;
+}
+
+@media (max-width: 575.98px) {
+	#eb-global-footer-nickname-img {
+		max-width: 445px;
+	}
 }
 
 #eb-global-footer-social .eb-list-inline > li {

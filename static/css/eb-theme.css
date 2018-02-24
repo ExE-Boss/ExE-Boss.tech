@@ -83,3 +83,8 @@ body {
 .eb-download-button-list > div {
 	margin:	4px;
 }
+
+#eb-global-navbar .navbar-brand > img {
+	margin:	-.9375rem 0 -.625rem;
+	height:	3rem;
+}
