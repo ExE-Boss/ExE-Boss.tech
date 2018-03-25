@@ -16,8 +16,7 @@
  */
 
 #main-page-brand {
-	background: #77D7F7;
-	background:	linear-gradient(to bottom, #77B7F7 0%, #77F7F7 100%);
+	background:	linear-gradient(to bottom, var(--eb-light-gradient-0) 0%, var(--eb-light-gradient-1) 100%);
 
 	display:	table;
 	padding:	0px;

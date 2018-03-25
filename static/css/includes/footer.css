@@ -15,6 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+body {
+	padding-bottom:	524.4px;
+}
+
 #eb-global-footer-steam-img {
 	max-width:	100%;
 	width:	400px;

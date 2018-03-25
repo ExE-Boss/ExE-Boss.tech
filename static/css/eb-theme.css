@@ -15,6 +15,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+:root {
+	--eb-light-gradient-0:	#77B7F7;
+	--eb-light-gradient-1:	#77F7F7;
+
+	--eb-dark-gradient-0:	#527FAB;
+	--eb-dark-gradient-1:	#52ABAB;
+}
+
+.code, code {
+	font-family:	"Input Mono", Consolas, "Lucida Console", monospace;
+	font-stretch:	condensed;
+}
+
 html, body {
 	overflow-x:	hidden !important;
 	position:	relative;
@@ -23,7 +36,6 @@ html, body {
 
 body {
 	padding-top:	50px;
-	padding-bottom:	524.4px;
 }
 
 .footer {

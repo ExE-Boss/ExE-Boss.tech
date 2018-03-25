@@ -20,8 +20,7 @@
 }
 
 #carousel-1 {
-	background:	#5295AB;
-	background:	linear-gradient(to bottom, #527FAB 0%, #52ABAB 100%);
+	background:	linear-gradient(to bottom, var(--eb-dark-gradient-0) 0%, var(--eb-dark-gradient-1) 100%);
 	margin-bottom:	50px;
 }
 
