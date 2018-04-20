@@ -24,7 +24,7 @@
 }
 
 .code, code {
-	font-family:	"Input Mono", Consolas, "Lucida Console", monospace;
+	font-family:	"Input Mono", "Consolas", "Lucida Console", monospace;
 	font-stretch:	condensed;
 }
 
@@ -49,8 +49,8 @@ body {
 	margin-right:	0px;
 	margin-bottom:	0px;
 
-	background: #d4d4d4;
-	background:	linear-gradient(to bottom, #d8d8d8 0%, #d0d0d0 100%);
+	background: #D4D4D4;
+	background:	linear-gradient(to bottom, #D8D8D8 0%, #D0D0D0 100%);
 }
 
 .footer-top {

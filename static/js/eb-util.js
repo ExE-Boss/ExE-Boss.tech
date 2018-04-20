@@ -35,14 +35,14 @@
 /**
  * @type Object
  */
-var EBUtil = (function() {
+const EBUtil = (() => { // eslint-disable-line no-unused-vars
 	/**
 	 * @return {UserAgentInfo}
 	 */
-	function parseUserAgent() {
+	const parseUserAgent = () => {
 		let ua = window.navigator.userAgent;
 		let match;
-		let iOSuserAgent = /^Mozilla\/[\d\.]+ \(i[A-Z]\w*; CPU (?:.* )*OS (\d+(?:_\d+)*) like Mac OS X\) AppleWebKit\/\d+(?:\.\d+)* \(KHTML, like Gecko\)/i;
+		let iOSuserAgent = /^Mozilla\/[\d.]+ \(i[A-Z]\w*; CPU (?:.* )*OS (\d+(?:_\d+)*) like Mac OS X\) AppleWebKit\/\d+(?:\.\d+)* \(KHTML, like Gecko\)/i;
 		/** @type BrowserInfo */
 		let browserInfo;
 		/** @type PlatformInfo */
@@ -69,9 +69,11 @@ var EBUtil = (function() {
 							vendor:	"Mozilla"
 						}
 						if (/[a-zA-Z]+/.test(browserData[2])) {
-							ver = browserData[2].split(/[a-zA-Z]+/, 2);
+							const ver = browserData[2].split(/[a-zA-Z]+/, 2);
 							browserInfo.version = ver[0];
 							browserInfo.buildID = ver[1];
+						} else {
+							browserInfo.version = browserData[2];
 						}
 						break;
 					} case "CriOS": {
@@ -90,7 +92,7 @@ var EBUtil = (function() {
 			browser:	browserInfo	|| {name: "Unknown", vendor: "Unknown", version: "Unknown"},
 			platform:	platformInfo	|| {os: "Unknown", version: "Unknown"}
 		}
-	}
+	};
 
 	return {
 		/**
@@ -104,5 +106,5 @@ var EBUtil = (function() {
 		getUAInfo() {
 			return parseUserAgent();
 		}
-	}
+	};
 })();
