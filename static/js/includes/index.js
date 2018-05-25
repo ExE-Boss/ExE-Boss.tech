@@ -17,7 +17,7 @@
 "use strict";
 
 $(() => {
-	let windowResized = () => {
+	const windowResized = () => {
 		let windowWidth	= $(window).innerWidth();
 		let calcSize	= windowWidth < 400 ? Math.max((windowWidth - 300) / 100.0 * 64 + 128, 128) : 192;
 		$("#main-page-brand-logo").width(calcSize);

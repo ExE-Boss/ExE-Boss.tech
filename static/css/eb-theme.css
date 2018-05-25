@@ -30,24 +30,19 @@
 
 html, body {
 	overflow-x:	hidden !important;
-	position:	relative;
 	min-height:	100vh;
 }
 
 body {
+	position:	relative;
+	display:	flex;
+
+	flex-direction:	column;
 	padding-top:	50px;
 }
 
 .footer {
-	position:	absolute;
-	left:	0;
-	right:	0;
-	bottom:	0;
-
-	margin-top:	50px;
-	margin-left:	0px;
-	margin-right:	0px;
-	margin-bottom:	0px;
+	margin:	50px 0 0;
 
 	background: #D4D4D4;
 	background:	linear-gradient(to bottom, #D8D8D8 0%, #D0D0D0 100%);

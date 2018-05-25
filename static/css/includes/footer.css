@@ -15,10 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-body {
-	padding-bottom:	524.4px;
-}
-
 #eb-global-footer-steam-img {
 	max-width:	100%;
 	width:	400px;
@@ -40,8 +36,8 @@ body {
 	}
 }
 
-#eb-global-footer-social .eb-list-inline > li {
-	display: inline-block;
+#eb-global-footer-social > .list-inline {
+	max-width: 320px;
 }
 
 #eb-global-footer-social .btn.rounded-circle {

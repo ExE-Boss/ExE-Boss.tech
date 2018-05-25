@@ -2,22 +2,35 @@
 /*
 
 # Except:
-!LICENSE
-!CNAME
-
 ## Sources
 !/_*
 /_site
 !/static
-!_config.yml
-!*.html
-!*.xhtml
-!robots.txt
+!/_config.yml
+!/*.html
+!/*.xhtml
+!/robots.txt
 
 ## Git
 !/.gitattributes
 !/.gitignore
-!/README.md
+!/.gitmodules
+!/LICENSE*
+!/README*
+
+## GitHub
+!/.github
+!/CNAME
+
+## npm + ruby
+!/.*ignore
+!/.*rc.js
+!/.*rc.yml
+!/.*rc.json
+!/Gemfile*
+!/gulpfile*
+!/package*
+!/yarn*
 
 # Unwanted crap
 .DS_Store

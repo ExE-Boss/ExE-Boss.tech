@@ -61,13 +61,13 @@ const EBUtil = (() => { // eslint-disable-line no-unused-vars
 							name:	"Safari",
 							vendor:	"Apple",
 							version:	browserData[2]
-						}
+						};
 						break;
 					} case "FxiOS": {
 						browserInfo = {
 							name:	"Firefox",
 							vendor:	"Mozilla"
-						}
+						};
 						if (/[a-zA-Z]+/.test(browserData[2])) {
 							const ver = browserData[2].split(/[a-zA-Z]+/, 2);
 							browserInfo.version = ver[0];
@@ -81,7 +81,7 @@ const EBUtil = (() => { // eslint-disable-line no-unused-vars
 							name:	"Chrome",
 							vendor:	"Google",
 							version:	browserData[2]
-						}
+						};
 						break;
 					}
 				}
@@ -91,7 +91,7 @@ const EBUtil = (() => { // eslint-disable-line no-unused-vars
 		return {
 			browser:	browserInfo	|| {name: "Unknown", vendor: "Unknown", version: "Unknown"},
 			platform:	platformInfo	|| {os: "Unknown", version: "Unknown"}
-		}
+		};
 	};
 
 	return {
@@ -103,7 +103,7 @@ const EBUtil = (() => { // eslint-disable-line no-unused-vars
 		 *
 		 * @return {UserAgentInfo}
 		 */
-		getUAInfo() {
+		getUAInfo: () => {
 			return parseUserAgent();
 		}
 	};
