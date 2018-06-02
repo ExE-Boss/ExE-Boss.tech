@@ -16,33 +16,31 @@
  */
 "use strict";
 
-/**
- * @typedef BrowserInfo
- * @property {String} name The browser name
- * @property {String} vendor The browser vendor
- * @property {String} version The browser version
+/** @typedef	{object}	BrowserInfo
+ * @property	{string}	name	The browser name
+ * @property	{string}	vendor	The browser vendor
+ * @property	{string}	version	The browser version
+ * @property	{string}	[buildID]	The browser build ID
  */
-/**
- * @typedef PlatformInfo
- * @property {String} os The platform’s operating system.
- * @property {String} version The operating system’s version.
+/** @typedef	{object}	PlatformInfo
+ * @property	{string}	os	The platform’s operating system.
+ * @property	{string}	version	The operating system’s version.
  */
-/**
- * @typedef UserAgentInfo
- * @property {BrowserInfo} browser The browser info
- * @property {PlatformInfo} platform The platform info
+/** @typedef	{object}	UserAgentInfo
+ * @property	{BrowserInfo}	browser	The browser info
+ * @property	{PlatformInfo}	platform	The platform info
  */
 /**
  * @type Object
  */
 const EBUtil = (() => { // eslint-disable-line no-unused-vars
 	/**
-	 * @return {UserAgentInfo}
+	 * @return {UserAgentInfo} The user agent info
 	 */
 	const parseUserAgent = () => {
-		let ua = window.navigator.userAgent;
+		const ua = window.navigator.userAgent;
+		const iOSuserAgent = /^Mozilla\/[\d.]+ \(i[A-Z]\w*; CPU (?:.* )*OS (\d+(?:_\d+)*) like Mac OS X\) AppleWebKit\/\d+(?:\.\d+)* \(KHTML, like Gecko\)/i;
 		let match;
-		let iOSuserAgent = /^Mozilla\/[\d.]+ \(i[A-Z]\w*; CPU (?:.* )*OS (\d+(?:_\d+)*) like Mac OS X\) AppleWebKit\/\d+(?:\.\d+)* \(KHTML, like Gecko\)/i;
 		/** @type BrowserInfo */
 		let browserInfo;
 		/** @type PlatformInfo */
@@ -53,7 +51,7 @@ const EBUtil = (() => { // eslint-disable-line no-unused-vars
 				os: "ios",
 				version: match[1].replace("_", ".")
 			};
-			let browserData = /(\w+)\/(\d+(?:\.\d+)*(?:\w+\d+(?:\.\d+)*)?) (?:.* )*Safari\/\d+(?:\.\d+)*/i.exec(ua.substring(match[0].length).trim());
+			const browserData = /(\w+)\/(\d+(?:\.\d+)*(?:\w+\d+(?:\.\d+)*)?) (?:.* )*Safari\/\d+(?:\.\d+)*/i.exec(ua.substring(match[0].length).trim());
 			if (browserData !== null) {
 				switch (browserData[1]) {
 					case "Version": {
@@ -69,11 +67,12 @@ const EBUtil = (() => { // eslint-disable-line no-unused-vars
 							vendor:	"Mozilla"
 						};
 						if (/[a-zA-Z]+/.test(browserData[2])) {
-							const ver = browserData[2].split(/[a-zA-Z]+/, 2);
-							browserInfo.version = ver[0];
-							browserInfo.buildID = ver[1];
+							[
+								browserInfo.version,
+								browserInfo.buildID,
+							] = browserData[2].split(/[a-zA-Z]+/, 2);
 						} else {
-							browserInfo.version = browserData[2];
+							[,browserInfo.version] = browserData;
 						}
 						break;
 					} case "CriOS": {
@@ -96,12 +95,12 @@ const EBUtil = (() => { // eslint-disable-line no-unused-vars
 
 	return {
 		/**
-		 * Gets the data as return the user agent string.
+		 * Gets the data as returned by the user agent string.
 		 *
 		 * Might not always work and should not be used for supplying
 		 * different code to different browsers.
 		 *
-		 * @return {UserAgentInfo}
+		 * @return {UserAgentInfo} The user agent info
 		 */
 		getUAInfo: () => {
 			return parseUserAgent();

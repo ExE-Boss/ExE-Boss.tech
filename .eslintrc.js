@@ -1,4 +1,5 @@
 "use strict";
+/* eslint-env node */
 /* eslint comma-dangle: ["error", "always"] */
 /* eslint sort-keys: ["error", "asc"] */
 
@@ -10,16 +11,24 @@ module.exports = {
 	},
 	"extends": "eslint:recommended",
 	"parserOptions": {
-		"sourceType": "script",
+		"ecmaVersion": 9,
+		"sourceType": "module",
 	},
 	"rules": {
 		"block-scoped-var": "error",
 		"comma-dangle": [
 			"error",
-			{
-				"functions": "never",
-			},
+			"only-multiline",
 		],
+		"consistent-return": "error",
+		"consistent-this": "error",
+		"dot-location": [
+			"error",
+			"property",
+		],
+		"dot-notation": "error",
+		"eol-last": "error",
+		"eqeqeq": "error",
 		"indent": [
 			"error",
 			"tab",
@@ -31,9 +40,17 @@ module.exports = {
 			"error",
 			"unix",
 		],
+		"no-await-in-loop": "warn",
 		"no-console": "off",
-		"no-octal": "off",
+		"no-empty": "off",
+		"no-octal": "warn",
 		"no-unused-vars": "warn",
+		"operator-linebreak": [
+			"error",
+			"after",
+		],
+		"prefer-const": "warn",
+		"prefer-destructuring": "warn",
 		"quotes": [
 			"error",
 			"double",
@@ -46,5 +63,6 @@ module.exports = {
 			"error",
 			"always",
 		],
+		"valid-jsdoc": "warn",
 	},
 };
