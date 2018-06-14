@@ -1,5 +1,5 @@
-{% if page.url contains ".xhtml" or page.url contains ".xml" %}<?xml version="1.0" encoding="UTF-8"?>
-{% endif %}<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
 <!--
 Copyright (C) 2017 ExE Boss
 
@@ -18,11 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
-		{% include head.html %}
+		{% include head.html -%}
 	</head>
 	<body>
-		{% include nav.html %}
-		{{ content }}{% if page.include-footer and page.include-footer != "false" %}
-		{% include footer.html %}{% endif %}
+		{% include nav.html -%}
+		{{ content -}}
+		{% if page.include-footer and page.include-footer != "false" -%}
+		{% include footer.html -%}
+		{% endif -%}
 	</body>
 </html>
