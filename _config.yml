@@ -23,7 +23,6 @@ defaults:
                 -   name: "style-src"
                     value:
                         - "'self'"
-                        - "'unsafe-inline'"
                         - "https://cdnjs.cloudflare.com/"
                 -   name: "object-src"
                     value:

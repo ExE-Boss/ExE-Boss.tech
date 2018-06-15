@@ -40,10 +40,36 @@
 #main-page-brand-title img {
 	margin-top:	calc(-11px - 1px / 3);
 	margin-left:	-5px;
+	min-width:	128px;
+	max-width:	192px;
 }
 
 #main-page-brand-title span {
 	display:	inline-block;
 	line-height:	192px;
 	height:	192px;
+	min-height:	128px;
+	max-height:	192px;
+}
+
+/** Logo size calculation */
+
+#main-page-brand-title {
+	--size: calc((100vw - 300px) * 0.64 + 128px);
+}
+
+#main-page-brand-title img {
+	width:	var(--size);
+}
+
+#main-page-brand-title span {
+	line-height:	var(--size);
+	line-height:	-moz-block-height;
+	height:	var(--size);
+}
+
+@media (min-width: 400px) {
+	#main-page-brand-title span {
+		line-height:	192px;
+	}
 }
