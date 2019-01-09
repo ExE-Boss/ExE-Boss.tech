@@ -1,0 +1,50 @@
+/*
+ * Copyright (C) 2017 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.carousel {
+	--eb-carousel-height:	400px;
+}
+
+#carousel-1 {
+	background:	linear-gradient(to bottom, var(--eb-dark-gradient-0) 0%, var(--eb-dark-gradient-1) 100%);
+	margin-bottom:	50px;
+}
+
+.carousel-inner {
+	height:	var(--eb-carousel-height);
+}
+
+.carousel-inner > .carousel-item {
+	vertical-align:	middle;
+	height:	var(--eb-carousel-height);
+}
+
+.carousel-inner > .carousel-item > .container {
+	vertical-align:	middle;
+}
+
+.carousel-caption {
+	padding-top:	80px;
+	vertical-align:	middle;
+	height:	var(--eb-carousel-height);
+}
+
+@media (max-width: 767px) and (max-height: 767px), (max-height: 575px) {
+	#carousel-1 {
+		--eb-carousel-height:	calc(100vh - 50px);
+	}
+}

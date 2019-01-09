@@ -1,0 +1,62 @@
+/*
+ * Copyright (C) 2017 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+html, body {
+	overflow-y:	hidden !important;
+	padding-bottom:	0px;
+}
+
+#eb-http-status-page {
+	background-image:	linear-gradient(to bottom, rgba(0, 127, 255, 0.5) 0%, rgba(0, 255, 255, 0.5) 100%);
+	margin-bottom:	0px;
+
+	display:	table;
+	padding:	0px;
+	height:	calc(100vh - 50px);
+	width:	100%;
+}
+
+#eb-http-status-page-content {
+	vertical-align:	middle;
+	display:	table-cell;
+	padding:	0px;
+}
+
+#eb-http-status-page-title {
+	margin-top:	0px;
+}
+
+#eb-http-status-page-title > small {
+	display:	block;
+}
+
+@media (max-width: 767px) {
+	h2 {
+		margin-top:	5px;
+	}
+
+	.jumbotron p {
+		font-size:	16px;
+		font-weight:	200;
+	}
+}
+
+@media (min-width: 768px) {
+	#eb-404-page-title > small {
+		font-size:	40%;
+	}
+}

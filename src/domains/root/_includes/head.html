@@ -1,0 +1,38 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% include content-security-policy.html %}
+<title>
+	{%- if page.title %}{{ page.title }} - {% endif %}{{ site.title -}}
+</title>
+<meta name="author" content="{{ site.author }}" />
+{%- comment %}
+<meta name="description" content="{{ site.description }}" />
+{%- endcomment %}
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{% unless page.url == '/' %}{{ page.url | remove: '.html' }}{% endunless %}" />
+
+<link rel="icon" href="{{ site.baseurl }}/static/img/favicon/desktop.ico" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha512-iqRdf+0KMFmNZgdsA+8bz1MWIIXQBUCavPYVSVI83fcVfH2Y2PnNooLN04bgTNoUiQvIzidiIHJAcIP/uAEV9w==" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/eb-theme.css" />
+
+<script type="application/javascript" defer="true" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha512-M+qMI1PHRcYcOpJzeJlaWbVVx2JJyPIwZas8or7dc97LZOokjvbpfRxymhVtlJLyjiF3wGyr0FJOA4DLONLVLw==" crossorigin="anonymous"></script>
+<script type="application/javascript" defer="true" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha512-ldc1sPu1FZ8smgkgp+HwnYyVb1eRn2wEmKrDg1JqPEb02+Ei4kNzDIQ0Uwh0AJVLQFjJoWwG+764x70zy5Tv4A==" crossorigin="anonymous"></script>
+<script type="application/javascript" defer="true" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha512-YK1Mz9UiZmhbFzXgMbl3bO49wZ78Xj3h8TtTBLFHEAEjUBxsEZdXd8Il5RWbhPOyB653bGQDNVGGny2mORZq4A==" crossorigin="anonymous"></script>
+<script type="application/javascript" defer="true" src="/static/js/eb-util.js"></script>
+<script type="application/javascript" defer="true" src="/static/js/includes/global.js"></script>
+<script type="application/javascript" defer="true" src="/static/js/includes/favicon.js"></script>
+<noscript id="global-head-link-icons-end"><link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/static/img/favicon/apple.png"/></noscript>
+{% if page.include-css %}
+	{%- for page-css in page.include-css %}
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/includes/{{ page-css }}.css" />
+	{%- endfor %}
+{%- endif %}
+{% if page.include-js %}
+	{%- for page-js in page.include-js %}
+		<script type="application/javascript" defer="true" src="/static/js/includes/{{ page-js }}.js"></script>
+	{%- endfor %}
+{%- endif %}
+{% if page.include-footer and page.include-footer != "false" %}
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/includes/footer.css" />
+{%- endif %}

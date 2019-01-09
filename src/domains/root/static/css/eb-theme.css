@@ -1,0 +1,97 @@
+/*
+ * Copyright (C) 2017 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+:root {
+	--eb-light-gradient-0:	#77B7F7;
+	--eb-light-gradient-1:	#77F7F7;
+
+	--eb-dark-gradient-0:	#527FAB;
+	--eb-dark-gradient-1:	#52ABAB;
+}
+
+.code, code {
+	font-family:	"Input Mono", "Consolas", "Lucida Console", monospace;
+	font-stretch:	condensed;
+}
+
+html, body {
+	overflow-x:	hidden !important;
+	min-height:	100vh;
+}
+
+body {
+	position:	relative;
+	display:	flex;
+
+	flex-direction:	column;
+	padding-top:	50px;
+}
+
+.footer {
+	margin:	50px 0 0;
+
+	background: #D4D4D4;
+	background:	linear-gradient(to bottom, #D8D8D8 0%, #D0D0D0 100%);
+}
+
+.footer-top {
+	padding-top:	15px;
+	padding-bottom:	15px;
+}
+
+.footer-bottom {
+	padding-top:	15px;
+	padding-bottom:	15px;
+
+	background: rgba(0, 0, 0, 0.15);
+	background:	linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.eb-list-inline {
+	max-width:	320px;
+	margin:	5px auto;
+}
+
+.eb-list-inline > li {
+	padding-bottom:	6px;
+}
+
+.eb-brand {
+	white-space:	nowrap;
+	line-height:	40px;
+	padding:	5px 15px;
+}
+
+.eb-icon-above {
+	display:	block;
+	margin:	5px auto;
+}
+
+.eb-icon {
+	vertical-align:	middle;
+	margin-right:	8px;
+	display:	inline !important;
+}
+
+.eb-download-button-list > div {
+	margin:	4px;
+}
+
+#eb-global-navbar .navbar-brand > img {
+	margin:	-.9375rem 0 -.625rem;
+	height:	3rem;
+}

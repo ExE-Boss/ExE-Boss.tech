@@ -1,0 +1,35 @@
+# Site Configuration
+title:	ExE Boss
+author:	ExE Boss
+description:	The Thing with the Stuff and the Things
+
+url:	https://exe-boss.tech
+baseurl:	""
+
+defaults:
+    -
+        scope:
+            path:	""
+        values:
+            layout:	"default"
+            include-footer:	true
+            include-css:
+            include-js:
+            content-security-policy:
+                -   name: "script-src"
+                    value:
+                        - "'self'"
+                        - "https://cdnjs.cloudflare.com/"
+                -   name: "style-src"
+                    value:
+                        - "'self'"
+                        - "https://cdnjs.cloudflare.com/"
+                -   name: "object-src"
+                    value:
+                        - "'none'"
+                -   name: "frame-ancestors"
+                    value:
+                        - "'self'"
+
+# WHO IN THE F# (the programming language) DOESN'T SUPPORT TABS IN 2017? '	' <- tab
+# P.S.: F# (the programming language) also doesn't support tabs, and that's terrible

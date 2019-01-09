@@ -1,0 +1,75 @@
+/*
+ * Copyright (C) 2017 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#main-page-brand {
+	background:	linear-gradient(to bottom, var(--eb-light-gradient-0) 0%, var(--eb-light-gradient-1) 100%);
+
+	display:	table;
+	padding:	0px;
+	height:	calc(100vh - 50px);
+	width:	100%;
+
+	border-radius:	0;
+}
+
+#main-page-brand-content {
+	vertical-align:	middle;
+	display:	table-cell;
+	padding:	0px;
+}
+
+#main-page-brand-title {
+	margin-top:	0px;
+	white-space:	nowrap;
+}
+
+#main-page-brand-title img {
+	margin-top:	calc(-11px - 1px / 3);
+	margin-left:	-5px;
+	min-width:	128px;
+	max-width:	192px;
+}
+
+#main-page-brand-title span {
+	display:	inline-block;
+	line-height:	192px;
+	height:	192px;
+	min-height:	128px;
+	max-height:	192px;
+}
+
+/** Logo size calculation */
+
+#main-page-brand-title {
+	--size: calc((100vw - 300px) * 0.64 + 128px);
+}
+
+#main-page-brand-title img {
+	width:	var(--size);
+}
+
+#main-page-brand-title span {
+	line-height:	var(--size);
+	line-height:	-moz-block-height;
+	height:	var(--size);
+}
+
+@media (min-width: 400px) {
+	#main-page-brand-title span {
+		line-height:	192px;
+	}
+}
