@@ -1,0 +1,48 @@
+{% extends "default.njk" %}
+
+{% macro project(name, description, url, icon, col, icon_width, icon_url) %}
+<div class="col-md-{{ col }} text-center">
+	<h3 class="text-center"><img class="eb-icon-above"
+		{%- if icon_url %} src="{{ icon_url }}"
+		{%- elseif icon %} src="/static/img/{{ icon }}"
+		{%- endif %} width="{% if icon_width %}{{ icon_width }}{% else %}96px{% endif %}" />
+		{{- name }}</h3>
+	<p>
+		{{- description }}
+	</p>
+	{%- if url %}
+	<div><a class="btn btn-info" href="{{ url }}">Project Home Page »</a></div>
+	{%- endif %}
+</div>
+{% endmacro %}
+
+{% block content %}
+<div id="main-page-brand" class="jumbotron">
+	<div id="main-page-brand-content" class="container">
+		<h1	id="main-page-brand-title" class="text-center"><img id="main-page-brand-logo"
+			class="eb-logo" src="{{ site.baseurl }}/static/img/favicon/logo.png"
+			/><span id="main-page-brand-text">ExE Boss</span></h1>
+	</div>
+</div>
+
+<section class="container">
+	<h2 class="text-center">Current Projects</h2>
+	<div class="row justify-content-center">
+		{{ project(name="WebExtensions",
+			description="All the WebExtensions that I've ever published",
+			url="/web-extensions", icon="pastel/bricks-eb-color.png", col="5") }}
+		{{ project(name="",
+			description="NOVA (Neatly Organized Voxel API) is a modding framework for voxel games.</p>
+			<p>It provides an abstraction that is easy to use and maintain while giving developers confidence
+			that their work can be used across different voxel games and their versions.", url="https://novaapi.net",
+			icon_url="https://novaapi.net/static/img/NOVA.svg", icon_width="256px", col="5") }}
+	</div>
+	<hr/>
+	<h2 class="text-center">Projects that I support<p><small>Projects that I am not directly involved with, but that I think are cool</small></p></h2>
+	<div class="row justify-content-center">
+		{{ project(name="Elastic tabstops",
+			description="A better way to indent and align code",
+			url="http://nickgravgaard.com/elastic-tabstops", col="5") }}
+	</div>
+</section>
+{% endblock %}

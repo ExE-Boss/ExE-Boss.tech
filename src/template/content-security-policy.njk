@@ -1,0 +1,28 @@
+{% if page.contentSecurityPolicy %}
+	<meta http-equiv="Content-Security-Policy" content="
+	{%- for csp in page.contentSecurityPolicy %}
+		{%- if csp.name != 'frame-ancestors' %}
+			{{ csp.name | replace('"', '%22') | replace(';', '%3B') }}
+				{%- for value in csp.value %} {{ value | replace('"', '%22') | replace(';', '%3B') }}{% endfor %};
+		{%- endif %}
+	{%- endfor %}
+	" />
+
+	{%- for csp in page.contentSecurityPolicy %}
+		{%- if csp.name == "frame-ancestors" %}
+			{%- if csp.value[0] == "'none'" %}
+				<meta http-equiv="X-Frame-Options" content="DENY" />
+			{%- elseif csp.value[0] == "'self'" %}
+				<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+			{%- else %}
+				<meta http-equiv="X-Frame-Options" content="ALLOW-FROM {{ csp.value[0] | replace('"', '&quot;') }}" />
+			{%- endif %}
+		{%- elseif csp.name == "script-src" %}
+			{%- if csp.value == "'unsafe-inline'" %}
+				<meta http-equiv="X-XSS-Protection" content="0" />
+			{%- else %}
+				<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+			{%- endif %}
+		{%- endif %}
+	{%- endfor %}
+{%- endif %}

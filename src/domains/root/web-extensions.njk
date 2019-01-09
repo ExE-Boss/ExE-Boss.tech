@@ -1,0 +1,252 @@
+{% extends "default.njk" %}
+
+{% macro downloadButtonList(include={}) %}
+<div class="eb-download-button-list">
+	{%- if include.AMO %}
+	<!-- Mozilla Firefox -->
+	<div class="btn-group" {%- if include.Thunderbird or include.soonThunderbird %} data-vertical="&lt;xs"{% endif %}>
+		<a class="btn btn-success" href="https://addons.mozilla.org/firefox/addon/{{ include.AMO }}/">
+			<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/firefox.png" height="20px" />Download for Firefox
+		</a>
+		{%- if include.Thunderbird %}
+		<a class="btn btn-success" href="https://addons.mozilla.org/thunderbird/addon/{{ include.Thunderbird }}/">
+			<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird
+		</a>
+		{%- elseif include.soonThunderbird %}
+		<span class="btn btn-success disabled" data-toggle="tooltip" data-placement="top"
+			title="No guarantees are made about this releasing before Half-Life 3">
+			<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/thunderbird.png" height="20px" />Coming soon to Thunderbird
+		</span>
+		{%- endif %}
+	</div>
+	{%- elseif include.soonAMO %}
+	<!-- Mozilla Firefox -->
+	<div class="btn-group" {%- if include.Thunderbird or include.soonThunderbird %} data-vertical="&lt;xs"{% endif %}>
+		<span class="btn btn-success disabled" data-toggle="tooltip" data-placement="top"
+			title="No guarantees are made about this releasing before Half-Life 3">
+			<img class="eb-logo" src="{{ site.baseurl }}/static/img/pastel/firefox.png" height="20px" />Coming soon to Firefox
+		</span>
+		{%- if include.Thunderbird %}
+		<a class="btn btn-success" href="https://addons.mozilla.org/thunderbird/addon/{{ include.Thunderbird }}/">
+			<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird
+		</a>
+		{%- elseif include.soonThunderbird %}
+		<span class="btn btn-success disabled" data-toggle="tooltip" data-placement="top"
+			title="No guarantees are made about this releasing before Half-Life 3">
+			<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/thunderbird.png" height="20px" />Coming soon to Thunderbird
+		</span>
+		{%- endif %}
+	</div>
+	{%- endif %}
+
+	{%- if include.Chrome %}
+	<!-- Google Chrome -->
+	<div class="btn-group">
+		<a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/{{ include.Chrome }}">
+			<i class="fa fa-chrome"></i> Download for Chrome
+		</a>
+	</div>
+	{%- elseif include.soonChrome %}
+	<!-- Google Chrome -->
+	<div class="btn-group">
+		<span class="btn btn-primary disabled" data-toggle="tooltip" data-placement="top"
+			title="No guarantees are made about this releasing before Half-Life 3">
+			<i class="fa fa-chrome"></i> Coming soon to Chrome
+		</span>
+	</div>
+	{%- endif %}
+
+	{%- if include.Edge %}
+	<!-- Microsoft Edge -->
+	<div class="btn-group">
+		<a class="btn btn-info" href="ms-windows-store://pdp/?ProductId={{ include.Edge }}">
+			<i class="fa fa-edge"></i> Download for Edge
+		</a>
+	</div>
+	{%- elseif include.soonEdge %}
+	<!-- Microsoft Edge -->
+	<div class="btn-group">
+		<span class="btn btn-info disabled" data-toggle="tooltip" data-placement="top"
+			title="No guarantees are made about this releasing before Half-Life 3">
+			<i class="fa fa-edge"></i> Coming soon to Edge
+		</span>
+	</div>
+	{%- endif %}
+
+	{%- if include.Opera %}
+	<!-- Opera -->
+	<div class="btn-group">
+		<a class="btn btn-danger" href="https://addons.opera.com/en/extensions/details/{{ include.Opera }}/">
+			<i class="fa fa-opera"></i> Download for Opera
+		</a>
+	</div>
+	{%- elseif include.soonOpera %}
+	<!-- Opera -->
+	<div class="btn-group">
+		<span class="btn btn-danger disabled" data-toggle="tooltip" data-placement="top"
+			title="No guarantees are made about this releasing before Half-Life 3">
+			<i class="fa fa-opera"></i> Coming soon to Opera
+		</span>
+	</div>
+	{%- endif %}
+</div>
+{% endmacro %}
+
+{% macro carousel(name, description, icon, links={}) %}
+<div class="carousel-item">
+	<div class="container">
+		<div class="carousel-caption">
+			<h1><img class="eb-icon" src="{{ site.baseurl }}/static/img/{{ icon }}" width="64px" />{{ name }}</h1>
+			<p>
+				{{- description -}}
+			</p>
+			{{- downloadButtonList(include=links) -}}
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro extension(name, description, icon, col=5, links={}) %}
+<div class="col-md-{{ col }} text-center">
+	<h2 class="text-center"><img class="eb-icon-above" src="{{ site.baseurl }}/static/img/{{ icon }}" width="96px" />{{ name }}</h2>
+	<p>{{ description }}</p>
+	{{- downloadButtonList(include=links) -}}
+</div>
+{% endmacro %}
+
+{% block content %}
+<div class="carousel slide" id="carousel-1" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-1" data-slide-to="1"></li>
+		<li data-target="#carousel-1" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="carousel-item active">
+	<div class="container">
+		<div class="carousel-caption">
+			<h1><img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/bricks-eb-color.png" width="64px" />Extension Suite</h1>
+			<p>
+				All my published extensions are available as an Add-on collection for a quick and easy download.
+			</p>
+			<div class="eb-download-button-list">
+				<!-- Mozilla Firefox -->
+				<div class="btn-group" data-vertical="&lt;xs">
+					<a class="btn btn-success" href="https://addons.mozilla.org/firefox/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/firefox.png" height="20px" />Download for Firefox
+					</a>
+					<a class="btn btn-success" href="https://addons.mozilla.org/thunderbird/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird
+					</a>
+				</div>
+
+				<!-- Google Chrome -->
+				<div class="btn-group">
+					<span class="btn btn-primary disabled" data-toggle="tooltip" data-placement="top"
+						title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-chrome"></i> Coming soon to Chrome
+					</span>
+				</div>
+
+				<!-- Microsoft Edge -->
+				<div class="btn-group">
+					<span class="btn btn-info disabled" data-toggle="tooltip" data-placement="top"
+						title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-edge"></i> Coming soon to Edge
+					</span>
+				</div>
+
+				<!-- Opera -->
+				<div class="btn-group">
+					<span class="btn btn-danger disabled" data-toggle="tooltip" data-placement="top"
+						title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-opera"></i> Coming soon to Opera
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		{{ carousel(name="about:about Button", icon="pastel/cog.png",
+			description="A WebExtension to quickly open about:* pages.",
+			links={AMO: "firefox-about-button", soonChrome: true}) }}
+
+		{{ carousel(name="View Image in New Tab", icon="pastel/picture-go.png",
+			description="Adds the ‘View Image in New Tab’ context menu item to the Firefox Context Menu.",
+			links={AMO: "new-tab-image_exe-boss", soonEdge: true}) }}
+	</div>
+	<a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+
+<section class="container">
+	<div class="row justify-content-center">
+		<div class="col col-md-8 text-center">
+			<h2 class="text-center"><img class="eb-icon-above" src="{{ site.baseurl }}/static/img/pastel/bricks-eb-color.png" width="96px" />Extension Suite</h2>
+			<p>
+				All my published extensions are available as an Add-on collection for a quick and easy download.
+			</p>
+			<div class="eb-download-button-list">
+				<!-- Mozilla Firefox -->
+				<div class="btn-group" data-vertical="&lt;xs">
+					<a class="btn btn-success" href="https://addons.mozilla.org/firefox/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/firefox.png" height="20px" />Download for Firefox
+					</a>
+					<a class="btn btn-success" href="https://addons.mozilla.org/thunderbird/collections/ExE_Boss/extension-suite">
+						<img class="eb-icon" src="{{ site.baseurl }}/static/img/pastel/thunderbird.png" height="20px" />Download for Thunderbird
+					</a>
+				</div>
+
+				<!-- Google Chrome -->
+				<div class="btn-group">
+					<span class="btn btn-primary disabled" data-toggle="tooltip" data-placement="top"
+						title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-chrome"></i> Coming soon to Chrome
+					</span>
+				</div>
+
+				<!-- Microsoft Edge -->
+				<div class="btn-group">
+					<span class="btn btn-info disabled" data-toggle="tooltip" data-placement="top"
+						title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-edge"></i> Coming soon to Edge
+					</span>
+				</div>
+
+				<!-- Opera -->
+				<div class="btn-group">
+					<span class="btn btn-danger disabled" data-toggle="tooltip" data-placement="top"
+						title="No guarantees are made about this releasing before Half-Life 3">
+						<i class="fa fa-opera"></i> Coming soon to Opera
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<div class="row justify-content-center">
+		{{ extension(name="about:about Button", icon="pastel/cog.png",
+			description="A WebExtension to quickly open about:* pages.",
+			links={AMO: "firefox-about-button", soonChrome: true}) }}
+
+		{{ extension(name="View Image in New Tab", icon="pastel/picture-go.png",
+			description="Adds the ‘View Image in New Tab’ context menu item to the browser’s Context Menu.",
+			links={AMO: "new-tab-image_exe-boss", soonEdge: true}) }}
+
+		{{ extension(name="Application Menu", icon="pastel/firefox.png",
+			description="A WebExtension which adds the Application menu to the Firefox titlebar.",
+			links={AMO: "application-menu"}) }}
+
+		{{ extension(name="Reload button in Location bar", icon="pastel/arrow-rotate-clockwise-225.png",
+			description="A WebExtension which adds the reload button to the Firefox Location bar.",
+			links={AMO: "reload-in-urlbar"}) }}
+	</div>
+</section>
+{% endblock %}

@@ -1,15 +1,19 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-{% include content-security-policy.html %}
+{% include "content-security-policy.njk" %}
 <title>
 	{%- if page.title %}{{ page.title }} - {% endif %}{{ site.title -}}
 </title>
+{% if site.author -%}
 <meta name="author" content="{{ site.author }}" />
-{%- comment %}
+{% endif -%}
+{% if page.description -%}
+<meta name="description" content="{{ page.description }}" />
+{% elseif site.description -%}
 <meta name="description" content="{{ site.description }}" />
-{%- endcomment %}
-<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{% unless page.url == '/' %}{{ page.url | remove: '.html' }}{% endunless %}" />
+{% endif -%}
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 
 <link rel="icon" href="{{ site.baseurl }}/static/img/favicon/desktop.ico" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha512-iqRdf+0KMFmNZgdsA+8bz1MWIIXQBUCavPYVSVI83fcVfH2Y2PnNooLN04bgTNoUiQvIzidiIHJAcIP/uAEV9w==" crossorigin="anonymous" />
@@ -23,16 +27,16 @@
 <script type="application/javascript" defer="true" src="/static/js/includes/global.js"></script>
 <script type="application/javascript" defer="true" src="/static/js/includes/favicon.js"></script>
 <noscript id="global-head-link-icons-end"><link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/static/img/favicon/apple.png"/></noscript>
-{% if page.include-css %}
-	{%- for page-css in page.include-css %}
-		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/includes/{{ page-css }}.css" />
+{% if page.includeCss %}
+	{%- for pageCss in page.includeCss %}
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/includes/{{ pageCss }}.css" />
 	{%- endfor %}
 {%- endif %}
-{% if page.include-js %}
-	{%- for page-js in page.include-js %}
-		<script type="application/javascript" defer="true" src="/static/js/includes/{{ page-js }}.js"></script>
+{% if page.includeJs %}
+	{%- for pageJs in page.includeJs %}
+		<script type="application/javascript" defer="true" src="/static/js/includes/{{ pageJs }}.js"></script>
 	{%- endfor %}
 {%- endif %}
-{% if page.include-footer and page.include-footer != "false" %}
+{% if page.includeFooter and page.includeFooter != "false" %}
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/includes/footer.css" />
 {%- endif %}

@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+{% if page.contentType === "xml" -%}
+	<?xml version="1.0" encoding="UTF-8"?>
+{% endif -%}
 <!DOCTYPE html>
 <!--
-Copyright (C) 2017 ExE Boss
+Copyright (C) 2018 ExE Boss
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,13 +20,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
-		{% include head.html -%}
+		{% include "head.njk" -%}
 	</head>
 	<body>
-		{% include nav.html -%}
-		{{ content -}}
-		{% if page.include-footer and page.include-footer != "false" -%}
-		{% include footer.html -%}
+		{% include "nav.njk" -%}
+		{% block content -%}
+			{{ page.content -}}
+		{% endblock -%}
+		{% if page.includeFooter -%}
+		{% include "footer.njk" -%}
 		{% endif -%}
 	</body>
 </html>

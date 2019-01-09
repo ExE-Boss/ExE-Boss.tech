@@ -64,17 +64,16 @@
 	padding-bottom:	8px;
 }
 
-#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] {
+#eb-global-footer-social .btn.rounded-circle[data-display="text"].smwc-style {
 	padding-top:	9px;
 	padding-bottom:	9px;
 	text-shadow:	#000 0 0 2px;
 	font-weight:	bold;
 
 	-webkit-text-stroke:	.8px #101018;
-	text-stroke:	.8px #101018;
 }
 
-#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] small {
+#eb-global-footer-social .btn.rounded-circle[data-display="text"].smwc-style small {
 	font-size:	10px;
 	margin:	1px -3px 0;
 	line-height:	13px;
@@ -84,18 +83,18 @@
 	-webkit-text-stroke:	.4px #101018;
 }
 
-#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-red {
+#eb-global-footer-social .btn.rounded-circle[data-display="text"].smwc-style .c-red {
 	color:	#FF3939;
 }
 
-#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-green {
+#eb-global-footer-social .btn.rounded-circle[data-display="text"].smwc-style .c-green {
 	color:	#00CE00;
 }
 
-#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-blue {
+#eb-global-footer-social .btn.rounded-circle[data-display="text"].smwc-style .c-blue {
 	color:	#00DEFF;
 }
 
-#eb-global-footer-social .btn.rounded-circle[data-display="text"][href^="https://www.smwcentral.net/" i] .c-yellow {
+#eb-global-footer-social .btn.rounded-circle[data-display="text"].smwc-style .c-yellow {
 	color:	#FFCE29;
 }

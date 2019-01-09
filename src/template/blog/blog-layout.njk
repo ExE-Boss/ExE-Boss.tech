@@ -1,0 +1,22 @@
+{% extends "../default.njk" %}
+
+{% block header %}
+{% include "header.njk" %}
+{% endblock %}
+
+{%- block content %}
+<section class="container">
+	<div class="row">
+		<main class="col">
+			{% block main %}{% endblock %}
+		</main>
+		<aside class="{% block aside-class -%} d-none d-sm-block {%- endblock %} col-5 col-md-4 col-lg-3">
+			{% block aside %}{% endblock %}
+		</aside>
+	</div>
+</section>
+{%- endblock %}
+
+{#
+
+#}

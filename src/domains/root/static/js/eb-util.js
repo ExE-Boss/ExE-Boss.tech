@@ -30,80 +30,78 @@
  * @property	{BrowserInfo}	browser	The browser info
  * @property	{PlatformInfo}	platform	The platform info
  */
-/**
- * @type Object
- */
-const EBUtil = (() => { // eslint-disable-line no-unused-vars
-	/**
-	 * @return {UserAgentInfo} The user agent info
-	 */
-	const parseUserAgent = () => {
-		const ua = window.navigator.userAgent;
-		const iOSuserAgent = /^Mozilla\/[\d.]+ \(i[A-Z]\w*; CPU (?:.* )*OS (\d+(?:_\d+)*) like Mac OS X\) AppleWebKit\/\d+(?:\.\d+)* \(KHTML, like Gecko\)/i;
-		let match;
-		/** @type BrowserInfo */
-		let browserInfo;
-		/** @type PlatformInfo */
-		let platformInfo;
 
-		if ((match = iOSuserAgent.exec(window.navigator.userAgent)) !== null) {
-			platformInfo = {
-				os: "ios",
-				version: match[1].replace("_", ".")
-			};
-			const browserData = /(\w+)\/(\d+(?:\.\d+)*(?:\w+\d+(?:\.\d+)*)?) (?:.* )*Safari\/\d+(?:\.\d+)*/i.exec(ua.substring(match[0].length).trim());
-			if (browserData !== null) {
-				switch (browserData[1]) {
-					case "Version": {
-						browserInfo = {
-							name:	"Safari",
-							vendor:	"Apple",
-							version:	browserData[2]
-						};
-						break;
-					} case "FxiOS": {
-						browserInfo = {
-							name:	"Firefox",
-							vendor:	"Mozilla"
-						};
-						if (/[a-zA-Z]+/.test(browserData[2])) {
-							[
-								browserInfo.version,
-								browserInfo.buildID,
-							] = browserData[2].split(/[a-zA-Z]+/, 2);
-						} else {
-							[,browserInfo.version] = browserData;
-						}
-						break;
-					} case "CriOS": {
-						browserInfo = {
-							name:	"Chrome",
-							vendor:	"Google",
-							version:	browserData[2]
-						};
-						break;
+const EBUtil = (() => { // eslint-disable-line no-unused-vars
+/**
+ * @return {UserAgentInfo} The user agent info
+ */
+const parseUserAgent = () => {
+	const ua = window.navigator.userAgent;
+	const iOSuserAgent = /^Mozilla\/[\d.]+ \(i[A-Z]\w*; CPU (?:.* )*OS (\d+(?:_\d+)*) like Mac OS X\) AppleWebKit\/\d+(?:\.\d+)* \(KHTML, like Gecko\)/i;
+	let match;
+		/** @type BrowserInfo */
+	let browserInfo;
+		/** @type PlatformInfo */
+	let platformInfo;
+
+	if ((match = iOSuserAgent.exec(window.navigator.userAgent)) !== null) {
+		platformInfo = {
+			os: "ios",
+			version: match[1].replace("_", "."),
+		};
+		const browserData = /(\w+)\/(\d+(?:\.\d+)*(?:\w+\d+(?:\.\d+)*)?) (?:.* )*Safari\/\d+(?:\.\d+)*/i.exec(ua.substring(match[0].length).trim());
+		if (browserData !== null) {
+			switch (browserData[1]) {
+				case "Version": {
+					browserInfo = {
+						name:	"Safari",
+						vendor:	"Apple",
+						version:	browserData[2],
+					};
+					break;
+				} case "FxiOS": {
+					browserInfo = {
+						name:	"Firefox",
+						vendor:	"Mozilla",
+					};
+					if (/[a-zA-Z]+/.test(browserData[2])) {
+						[
+							browserInfo.version,
+							browserInfo.buildID,
+						] = browserData[2].split(/[a-zA-Z]+/, 2);
+					} else {
+						[,browserInfo.version] = browserData;
 					}
+					break;
+				} case "CriOS": {
+					browserInfo = {
+						name:	"Chrome",
+						vendor:	"Google",
+						version:	browserData[2],
+					};
+					break;
 				}
 			}
 		}
-
-		return {
-			browser:	browserInfo	|| {name: "Unknown", vendor: "Unknown", version: "Unknown"},
-			platform:	platformInfo	|| {os: "Unknown", version: "Unknown"}
-		};
-	};
+	}
 
 	return {
-		/**
-		 * Gets the data as returned by the user agent string.
-		 *
-		 * Might not always work and should not be used for supplying
-		 * different code to different browsers.
-		 *
-		 * @return {UserAgentInfo} The user agent info
-		 */
-		getUAInfo: () => {
-			return parseUserAgent();
-		}
+		browser:	browserInfo	|| {name: "Unknown", vendor: "Unknown", version: "Unknown"},
+		platform:	platformInfo	|| {os: "Unknown", version: "Unknown"},
 	};
+};
+
+return {
+	/**
+	 * Gets the data as returned by the user agent string.
+	 *
+	 * Might not always work and should not be used for supplying
+	 * different code to different browsers.
+	 *
+	 * @return {UserAgentInfo} The user agent info
+	 */
+	getUAInfo: () => {
+		return parseUserAgent();
+	},
+};
 })();

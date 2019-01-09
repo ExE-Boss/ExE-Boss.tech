@@ -1,10 +1,6 @@
----
-title:	404 Error
-include-footer:	false
-include-css:
-    - "http-status"
----
+{% extends "default.njk" %}
 
+{% block content %}
 <div id="eb-http-status-page" class="jumbotron">
 	<div id="eb-http-status-page-content">
 		<div class="container">
@@ -35,3 +31,4 @@ include-css:
 		</div>
 	</div>
 </div>
+{% endblock %}

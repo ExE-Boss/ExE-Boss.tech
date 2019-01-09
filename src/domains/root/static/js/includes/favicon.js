@@ -18,16 +18,16 @@
 /* global EBUtil */
 
 $(() => {
-	let uaInfo = EBUtil.getUAInfo();
+	const uaInfo = EBUtil.getUAInfo();
 	if (uaInfo.platform.os === "ios") {
-		let link = document.createElement("link");
+		const link = document.createElement("link");
 		link.setAttribute("rel",	"apple-touch-icon-precomposed");
 		switch (uaInfo.browser.name) {
 			case "Safari": {
 				link.setAttribute("href",	"/static/img/favicon/apple.png");
 				break;
 			} case "Firefox": {
-				let majorVersion = Number(uaInfo.browser.version.split(".")[0]);
+				const majorVersion = Number(uaInfo.browser.version.split(".")[0]);
 				if (majorVersion >= 8) {
 					/*
 					let size;

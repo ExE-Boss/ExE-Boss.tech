@@ -17,12 +17,7 @@
 "use strict";
 /* eslint sort-keys: ["error", "asc"] */
 
+/** @type {Record<string, string>} */
 module.exports = {
-	env: {
-		browser:	true,
-		commonjs:	true,
-		es6:	true,
-		node:	false,
-		jquery:	true,
-	},
+	root:	"ExE-Boss.GitHub.io",
 };

@@ -18,7 +18,7 @@
 
 $(() => {
 	const windowResized = () => {
-		let isXS = $(window).innerWidth() < 576;
+		const isXS = $(window).innerWidth() < 576;
 		$('.btn-group[data-vertical="<xs"], .btn-group-vertical[data-vertical="<xs"]').each((index, groupElement) => {
 			if (isXS) {
 				groupElement.classList.add("btn-group-vertical");

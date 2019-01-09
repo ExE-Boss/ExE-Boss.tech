@@ -1,0 +1,28 @@
+{% extends "blog-layout.njk" %}
+
+{% block main %}
+	<h1>{{ page.title }}</h1>
+	<div>
+		{{ page.content }}
+	</div>
+{% endblock %}
+
+{% block aside %}
+	<div id="author-container" class="bg-light rounded border p-3">
+		<h1 class="text-center">Author</h1>
+		<div class="mw-100 mx-auto"><div><img id="author-picture" class="rounded-circle"/></div></div>
+		<h2 id="author-name" class="text-center"></h2>
+	</div>
+{% endblock %}
+
+{% block content %}
+	{{ super() }}
+	{% if page.comments %}
+		<section class="container pb-5" id="comments" data-issue="{{ page.comments }}">
+			<h2 class="border-bottom pb-2 mb-3">Comments <a class="small" href="https://github.com/ExE-Boss/blog.ExE-Boss.tech/issues/{{ include.comments }}">(loaded from GitHub)</a></h2>
+			{% raw %}
+				{% include "comments" %}
+			{% endraw %}
+		</section>
+	{% endif %}
+{% endblock %}
