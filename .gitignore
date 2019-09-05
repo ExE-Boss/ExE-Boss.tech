@@ -22,7 +22,7 @@
 !/.*rc.json
 !/gulpfile*
 !/package*
-!/shrinkwrap*
+!/pnpm*
 !/.*ignore
 
 ## Travis CI
@@ -37,3 +37,4 @@
 ehthumbs.db
 Thumbs.db
 *~
+*.log
